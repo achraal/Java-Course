@@ -1,0 +1,3041 @@
+**Introduction
+->Histoire
+Le projet Java a débuté en 1991 sous le nom de "Green Project", avec l'objectif initial de développer des applications pour des appareils électroniques grand public. Le langage était initialement appelé "Oak" mais a été renommé en "Java" avant sa sortie officielle en 1995. Oracle a acquis Sun Microsystems en 2009, ce qui explique pourquoi Java appartient désormais à Oracle.
+
+->Utilisation
+Java est largement utilisé pour développer divers types d'applications :
+
+Applications Web : Servlets, JSP (JavaServer Pages), etc.
+Applications Mobiles : Initialement le seul langage officiel pour Android jusqu'à l'avènement du Kotlin.
+Logiciels d'Entreprise : Utilisé dans les systèmes complexes côté serveur.
+Big Data et Technologies Côtier Serveur.
+
+-> Pourquoi apprendre le Java
+Ressources Abondantes : Documentation détaillée et communauté active.
+Portabilité : Exécution sur multiples plateformes grâce à la JVM.
+Simplicité Syntaxique : Facile à lire et écrire comparativement à certains autres langages.
+
+->Qu'est ce que Java
+ava est un langage de programmation orienté objet (POO) créé par James Gosling et Patrick Naughton, employés de Sun Microsystems, en 1995. Il est conçu pour être multiplateforme, ce qui signifie qu'une fois le code écrit, il peut être exécuté sur n'importe quel appareil supportant la machine virtuelle Java (JVM), sans nécessiter de modifications46.
+
+Caractéristiques Clés
+Programmation Orientée Objet (POO) : Java permet la création d'objets qui encapsulent des données et des méthodes. Cela facilite la modélisation du monde réel dans les programmes.
+Multiparadigme : Bien que principalement orienté objet, Java intègre également des éléments structurés et impératifs. Cela lui permet d'être flexible dans sa syntaxe et son utilisation.
+Multiplateforme : Grâce à la JVM, les applications écrites en Java peuvent fonctionner sur divers systèmes d'exploitation comme Windows, macOS ou Linux sans modification du code source.
+
+->Compilation (machine virtuelle)
+Le code source écrit en langage Java est compilé en bytecode par un compilateur (javac). Ce bytecode n'est pas exécutable directement par le processeur mais nécessite une machine virtuelle (JVM) pour être interprété ou compilé dynamiquement lors du runtime. Cette étape supplémentaire peut ralentir l'exécution comparée aux codes natifs comme ceux générés par C ou C++.
+
+La Java Virtual Machine (JVM) est un composant essentiel de l'environnement d'exécution Java. Elle joue le rôle d'interprète entre le code Java et le matériel sous-jacent, permettant aux applications Java de fonctionner sur différentes plateformes sans nécessiter de modifications majeures.
+
+
+->Licence GPL 
+La Licence GPL, ou GNU General Public License, est une licence de logiciel libre créée par Richard Stallman pour le projet GNU. Elle permet à un logiciel d'être utilisé, modifié et redistribué librement par tous. Voici quelques points clés sur la GPL :
+
+Principes de la Licence GPL
+Libertés fondamentales : La GPL garantit quatre libertés essentielles aux utilisateurs :
+Liberté d'exécuter le logiciel pour n'importe quel usage.
+Liberté d'étudier le fonctionnement du programme et de l'adapter.
+Liberté de redistribuer des copies.
+Liberté de modifier et distribuer les versions modifiées.
+
+Copyleft : La GPL utilise le concept de copyleft, qui s'appuie sur les lois sur le droit d'auteur mais vise à préserver la liberté des utilisateurs. Cela signifie que tout travail dérivé doit être distribué sous la même licence.
+
+Utilisation dans différents projets
+La Licence GPL est largement utilisée dans divers projets open source, notamment WordPress et OpenJDK. Elle a été adoptée par plus de la moitié des logiciels libres en raison de sa flexibilité et ses principes philosophiques.
+
+Exemples notables
+WordPress : Publié sous licence GPL, ce qui permet aux utilisateurs non seulement d'utiliser mais aussi de modifier et redistribuer WordPress librement.
+OpenJDK : Bien que certaines parties soient sous licences différentes (comme la GNU General Public License version 2 avec une exception), OpenJDK utilise principalement cette approche pour garantir son caractère open source.
+
+
+
+->Avantages 
+Portabilité du Code :
+
+Java permet d'écrire une fois et d'exécuter partout grâce à la Machine Virtuelle Java (JVM). Cela signifie que les applications développées en Java peuvent être exécutées sur n'importe quelle plateforme supportant la JVM, sans nécessiter une recompilation pour chaque système d'exploitation.
+
+Disponibilité des Bibliothèques :
+Java dispose d'un écosystème riche en bibliothèques et API prêtes à l'emploi, ce qui facilite le développement rapide et efficace d'applications variées. Les développeurs n'ont pas besoin de réinventer la roue pour chaque fonctionnalité.
+Manipulation de Bases de Données :
+Java propose divers frameworks comme Hibernate ou JDBC qui simplifient l'accès aux bases de données sans nécessiter une configuration complexe au niveau du code source. Ces frameworks offrent également un haut niveau d'abstraction, facilitant ainsi l'utilisation des bases de données.
+Multithreading :
+La capacité à gérer plusieurs threads simultanément améliore considérablement la performance des applications, particulièrement celles nécessitant un traitement intensif ou parallèle.
+Sécurité Renforcée :
+Le langage intègre des fonctionnalités robustes pour protéger les applications contre les menaces potentielles, ce qui est essentiel dans les domaines sensibles comme la finance ou la santé.
+Gestion Automatique de la Mémoire :
+Le système automatique permettant le nettoyage périodique (garbage collection) libère les développeurs du souci constant lié à la gestion manuelle des ressources mémoire, réduisant ainsi le risque de fuites mémoire souvent présent dans C++.
+Orienté Objet avec Modularité et Réutilisation du Code :
+Cette approche favorise une structure logique du code, améliorant sa lisibilité et facilitant sa maintenance sur le long terme grâce aux principes tels que l'héritage et l'encapsulation.
+Communauté Active et Support Extensif :
+Une communauté dynamique offre un large soutien documentaire ainsi qu'une assistance continue aux développeurs via divers forums et ressources disponibles en ligne.
+
+->Inconvénients/limites 
+
+1. Gestion de Mémoire
+Gestion Automatique : Bien que la gestion automatique de la mémoire par le Garbage Collector soit un avantage en termes d'abstraction, elle peut entraîner des problèmes de performances dus à la surcharge du processus, ce qui peut impacter les temps de réponse des applications.
+Consommation Élevée : La nature virtuelle du langage conduit souvent à une consommation élevée de ressources système, ce qui peut être contraignant pour les applications légères.
+2. Temps d'Exécution
+Lenteur au Démarrage : Les applications Java nécessitent souvent un temps plus long pour démarrer en raison du processus initialisation de la JVM (Java Virtual Machine).
+Performances Relatives : Comparé à certains langages compilés natifs ou plus modernes comme Kotlin ou Swift, Java peut offrir des performances inférieures en termes réactivité et rapidité d'exécution.
+3. Intégration avec le Système
+Apparence Non Native (Desktop) : Les interfaces graphiques utilisateur créées avec Java ne sont pas toujours natives et peuvent manquer d'intégration visuelle fluide avec l'environnement desktop.
+4. Complexité et Verbosité
+La syntaxe verbeuse rend le code complexe et difficile à maintenir pour les débutants, augmentant ainsi la probabilité d'erreurs lors du développement.
+5. Limitations dans Certaines Plateformes
+Bien que Java ait été largement utilisé dans le développement Android, il ne s'intègre pas toujours parfaitement aux exigences actuelles des API spécifiques à Android ou aux contraintes matérielles variées des appareils mobiles modernes.
+
+->Mise à jour
+Java SE 7 Sortie : 28 juillet 2011, Nouveautés :
+Notation binaire
+Formatage numérique
+Switch avec des strings
+Inférence des types
+Multicatch
+API java.nio (JSR 203)
+Autoboxing
+Améliorations de l'interface utilisateur
+Dernière mise à jour publique : 7u90
+
+Java SE 8 (LTS) Sortie : 18 mars 2014, Nouveautés :
+Lambdas
+Optionnels
+Implémentations par défaut dans les interfaces
+Refonte de l'API date
+Streams
+
+Mises à jour notables :
+8u181 : Corrections de bogues, améliorations de sécurité, suppression de Java DB (Apache Derby)1.
+Licence : À partir de janvier 2019, les mises à jour pour un usage professionnel nécessitent une licence payante2.
+
+Java SE 9 Sortie : 21 septembre 2017, Nouveautés :
+Modularisation avec le projet Jigsaw
+JShell
+Projet Valhalla (amélioration des types)
+Support natif de HTTP/2
+
+Java SE 10 Sortie : 20 mars 2018, Nouveautés :
+Inférence des types des variables locales
+Partage de binaire pour un lancement plus rapide
+Activation de Graal (compilateur JIT)
+
+Java SE 11 (LTS) Sortie : 25 septembre 2018, Nouveautés :
+Amélioration des paramètres des lambdas
+Client HTTP plus évolué
+Suppression des modules CORBA et EE par défaut
+
+Java SE 12 à 20, Sorties successives avec diverses améliorations et fonctionnalités expérimentales, notamment :
+Shenandoah (ramasse-miettes avec pauses courtes)
+Expressions Switch améliorées
+API de fonctions étrangères et de mémoire
+Support pour les architectures ARM64 et RISC-V
+
+
+->Installation
++outil de developpement (java se (Java Development Kit (JDK) qui contient JRE (Java Runtime Environment) + des outils) et JRE)
+Description : Le JDK est essentiel pour compiler et exécuter des programmes Java. Il inclut le compilateur Java (javac), l'interpréteur Java (java), et divers outils de développement.
+
++Environnement de Développement Intégré (IDE)
+IntelliJ IDEA : Très apprécié pour ses fonctionnalités avancées et sa facilité d'utilisation.
+Eclipse : Populaire pour sa flexibilité et sa large communauté.
+NetBeans : Idéal pour les débutants et les projets de petite envergure.
+VS Code : Un éditeur léger avec des extensions pour Java.
+Atom : Créé par GitHub, Atom est un éditeur de texte open source lancé en 2014. 
+Sublime Text : est un éditeur de texte payant développé par Jon Skinner et sa société, Sublime HQ. Il est très populaire pour sa rapidité et sa facilité d'utilisation.
+
+-----------------------------------------------------------------------------------
+
+**Premier Programme
+
+commentaires => // une seule ligne 
+		/* */plusieurs lignes
+
+nom de la classe = nom du fichier
+class MainApp => déclare une nouvelle classe ; en Java, chaque programme doit avoir au moins une classe.
+public static void main(String[] args) est la méthode d'entrée du programme. C'est ici que le programme commence son exécution.
+	public => signifie que cette méthode peut être accédée depuis n'importe où.
+	static => signifie qu'elle peut être appelée sans créer un objet de la classe.
+	void => indique que cette méthode ne retourne aucune valeur.
+	(String[] args) => permet de passer des arguments à l'exécution du programme via la ligne de commande.
+
+args => obligé de le mettre meme si il n'existe pas
+
+System.out.println -> System => classe native de Java
+			out => attribut
+			println => (print line) fonctions pour affichage avec un retour à la ligne
+
+
+class MainApp
+{
+    public static void main(String[] args)
+    {
+        System.out.println("Bonjour tout le monde ! :)");
+    }
+}
+
+
+javac MainApp.java
+java MainApp
+
+----------------------------------------------------------------------
+**Types de données
+
+boolean => Boolean => 1 octet => true(1) | false(0)
+byte => Byte => 1 octet => -127 à 128
+char => Character => 2 octet => Unicode (65.536 caractères disponibles)
+short => Short => 2 octet => -32.768 à 32767
+int => Integer => 4 octet => -2.147.483.648 à 2.147.483.647  
+long => Long => 8 octet => -2^63 à 2^63-1
+float => Float => 4 octet => 1.4*10^-45 à 3.4*10^38
+double => Double => 8 octet => 4.9*10^-324 à 1.7*10^328
+Type primitif => Type Objet Associé => Place en mémoire => Fourchette de valeurs (min & max) 
+
+
+
+binaire -> 0b (prefixe)
+decimal -> 0 (prefixe)
+hexadecimal -> 0x (prefixe)
+
+séparateur des milliers (_)
+
+\n => nouvelle ligne
+\t => tabulation
+\b => retour chariot
+\r => retour arrière
+\f => nouvelle page
+octale => prefixe \0
+hexadecimal => prefixe \x
+
+
+
+
+
+-----------------------------------------
+*Variables et constantes
+
+-Pas de caractères spéciaux, pas d'espaces, commence par une lettre ou underscore 
+-> camel case => uneVariablePeuLongue
+-> pascal case => UneVariable
+-> snake case => une_variable
+
+Rq : eviter de déclarer une variable sans valeur (variable = 0 pour une valeur par défaut et la changer plus tard)
+
+la portée de variable => définit les parties du code où cette variable peut être utilisée. Elle dépend de l'emplacement où la variable est déclarée dans le programme.
+garbage collector (GC) => en Java est un processus automatique qui gère la mémoire de la machine virtuelle Java (JVM). Il s'occupe principalement de l'allocation et de la désallocation de mémoire pour permettre une utilisation efficace des ressources système sans que le développeur ait à gérer manuellement la libération de mémoire, contrairement à d'autres langages comme C++.
+
+
+public class MainApp
+{
+    public static void main(String[] args)
+    {
+        int ageUtilisateur = 0;
+        System.out.println(ageUtilisateur);
+
+        ageUtilisateur = 24;
+        System.out.println(ageUtilisateur);
+
+        final int NUMBER = 26 ;
+        System.out.println(NUMBER);
+
+        float temperature = 25.5f;
+        System.out.println(temperature);
+
+        final double PI = 3.14;
+        System.out.println(PI);
+    }
+}
+
+
+
+----------------------------------------------
+**Opérateurs
+
+= => affectation
++ => concaténation
+
+-> opérateurs arithmétique
++ => addition
+- => soustraction
+* => multiplication
+/ => division
+% => modulo
+
+-> opérateurs de comparaison 
+
+<
+>
+!=
+<=
+>=
+== => valeur
+
+->opérateur d'incrémantation
+++ (post et pre)
+-- (post et pre)
++= 
+-+
+*=
+/=
+%=
+
+-> opérateurs logiques
+&&
+||
+!
+
+public class MainApp 
+{
+    public static void main(String[] args)
+    {
+        int age = 24;
+        System.out.println("Tu as " + age + "ans");
+
+        int result = 7 / 2;
+        System.out.println(result);
+
+        double result3 = (double) 7 / 2;
+        System.out.println(result3);
+
+        int result2 = 7 % 2;
+        System.out.println(result2);
+
+        int exp = 0;
+        int exp2 = exp++;
+        int exp3 = ++exp;
+        System.out.println(exp);
+        System.out.println(exp2);
+
+        System.out.println(exp3);
+    }
+}
+
+
+
+
+
+---------------------------------------
+**Conditions
+
+public class MainApp
+{
+    public static void main(String[] args)
+    {
+        boolean value = (24 == 2);
+        System.out.println(value);
+
+        int val = 16;
+
+        if(val == 24)
+        {
+            System.out.println("val = 24");
+        }else{
+            System.out.println("val = 16");
+        }
+
+        int val2 = 25;
+        if(val2 < 0)
+            System.out.println("value < 0");
+        else if(val2 > 100)
+            System.out.println("value > 100");
+        else 
+            System.out.println(val2);
+
+        int option = 1;
+        switch(option)
+        {
+            case 1: 
+                System.out.println("option = 1");
+                break;
+            default:
+                System.out.println("option != 1");
+                break;
+        }
+
+        String choice = "yes";
+        
+        switch(choice)
+        {
+            case "yes":
+                System.out.println("choice = yes");
+                break;
+            default:
+                System.out.println("option = no");
+                break;
+        }
+    }
+}
+
+
+
+----------------------------------------------
+**Boucles
+
+-> while
+public class App {
+    public static void main(String[] args) {
+        int i = 0;
+        
+        while (i != 10) {
+            System.out.println(i);
+            
+            if(i == 5)
+                break;
+            
+            i++;
+        }
+    }
+}
+
+
+-> do while
+public class App
+{
+    public static void main(String[] args)
+    {
+        int i = 0;
+
+        do{
+            i++;
+            if(i == 5)
+                continue;
+
+            System.out.println(i);
+        }
+        while(i != 10);
+    }
+}
+
+->for
+public class App {
+    public static void main(String[] args) {
+        int i = 0;
+        
+        for( i = 0 ; i != 10 ; i++)
+        {
+            System.out.println(i);
+        }
+    }
+}
+
+
+
+------------------------------------------------------------
+**Construction d'une classe
+
+Une classe est un modèle qui définit les variables (appelées attributs) et les méthodes qui constituent un objet. Elle décrit les caractéristiques et les comportements d'un objet, permettant ainsi de créer des instances (objets) de cette classe. Les classes sont fondamentales dans la programmation orientée objet (POO) et permettent l'encapsulation, l'héritage et le polymorphisme.
+
+la portée de la classe (public, private)
+
+Rq : on n'a pas besoin d'indiquer le fichier java compile tous les fichiers
+
+
+-----------------------------------------------------------------------App.java
+public class App
+{
+    public static void main(String[] args)
+    {
+        Cat miau = new Cat();
+        Cat miaou = new Cat();
+    }
+}
+-----------------------------------------------------------------------Cat.java
+public class Cat {
+    public Cat()
+    {
+        System.out.println("Je suis un chat : " + this);
+    }
+}
+------------------------------------------------------------------------
+
+le constructeur avec le mot clé public suivi du nom de la classe
+instanciation dans la classe main => avec le mot clé "new"
+
+Rq : les attributs sont public par défaut il faut ajouter le mot clé "private"
+
+
+**attributs
+
+-----------------------------------------------------------------------App.java
+public class App
+{
+    public static void main(String[] args)
+    {
+        Cat miau = new Cat("achraf", 22);
+        Cat miaou = new Cat("Jason", 25);
+    }
+}
+-----------------------------------------------------------------------Cat.java
+public class Cat {
+    public Cat(String name, int age)
+    {
+        this.mName = name;
+        this.Age = age;
+
+        System.out.println(this.mName + " - " + this.Age);
+    }
+
+    private String mName;
+    private int Age;
+}
+-----------------------------------------------------------------------
+
+
+**Méthodes
+
+-> avantages => eviter de repeter le code
+	modification sur la méthode au lieu du code
+	ne doit faire qu'une seule chose
+
+
+Rq : En Java, il n'est pas possible de définir une valeur par défaut pour un paramètre de méthode comme on le ferait en C++ ou Python. Cependant, vous pouvez utiliser la surcharge de méthode pour simuler ce comportement. La JVM décide quel méthode appelée pour chaque arguments donnés.
+
+
+la surcharge de méthode =>  est un concept qui permet à une classe d'avoir plusieurs méthodes portant le même nom, mais avec des listes de paramètres différentes. Cela signifie que les méthodes surchargées doivent différer soit par le nombre de paramètres, soit par le type de données des paramètres, ou encore par l'ordre des paramètres. Le nom des paramètres n'a pas d'importance, mais les types de retour peuvent être identiques ou différents.
+
+
+---------------------------------------------------------------------App.java
+public class App {
+    public static void main(String[] args)
+    {
+        prog();
+        //pas mal de choses
+        prog();
+
+        System.out.println(getNumberTwo());
+        System.out.println(getNumber());
+
+        String message = say("Hello !", 28);
+        System.out.println(message);
+
+        
+        System.out.println(sum (2, 5));
+        System.out.println(sum (2.3, 5.6));
+
+        Player p = new Player();
+        Player p1 = new Player("Achraf");
+        Player p2 = new Player("Achraf", 28);
+	
+        p1.attack();
+    }
+    public static void prog()
+    {
+        System.out.println("Bonjour");
+        System.out.println("Comment allez vous ?");
+
+        //modifiaction
+        System.out.println("Moi Bien");
+    }
+
+    public static int getNumberTwo()
+    {
+        return 2;
+    }
+
+    public static int getNumber()
+    {
+        boolean info = true;
+        if(info)
+            return 1;
+        else
+            return 0;
+    }
+    public static String say(String msg, int nb)
+    {
+        System.out.println(msg);
+        msg = "World !";
+        return msg + nb;
+    }
+    public static int sum(int a, int b)
+    {
+        return a + b;
+    }
+    public static double sum(double a, double b)
+    {
+        return a + b;
+    }
+}
+---------------------------------------------------------------------Player.java
+public class Player {
+    public Player()
+    {
+        this.mName = "Inconnu";
+        this.mLevel = 0;
+        System.out.println(this.mName + " - " + this.mLevel);
+    }
+    public Player(String name)
+    {
+        this.mName = name;
+        this.mLevel = 0;
+        System.out.println(this.mName + " - " + this.mLevel);
+    }
+    public Player(String name, int level)
+    {
+        this.mLevel = level;
+        this.mName = name;
+        System.out.println(this.mName + " - " + this.mLevel);
+    }
+    private String mName;
+    private int mLevel;
+}
+---------------------------------------------------------------------
+
+-> encapsulation des données
+
+--> getters et setters
+
+variable de classe => également appelée variable statique, est une variable déclarée avec le mot-clé static dans une classe. Elle est partagée par toutes les instances de cette classe et n'est pas liée à une instance spécifique. Voici quelques caractéristiques clés des variables de classe :
+
+Déclaration : Elles sont déclarées avec le mot-clé static dans une classe, mais en dehors de toute méthode ou constructeur.
+Portée : Elles sont accessibles via le nom de la classe elle-même, par exemple MaClasse.maVariable.
+Durée de vie : Elles existent tout au long de l'exécution du programme, créées lors du chargement de la classe et détruites à l'arrêt du programme.
+Utilisation : Utiles pour stocker des informations partagées par toutes les instances d'une classe, comme des constantes ou des compteurs globaux.
+
+
+---------------------------------------------------------------------App.java
+public class App
+{
+    public static void main(String[] args)
+    {
+        System.out.println("ENRIGETREMENTS : " + SoftwareRegistration.getNumberOfRegistrations());
+        SoftwareRegistration sr = new SoftwareRegistration(2025);
+
+        sr.setExpirationYear(2050);
+        System.out.println("Nouvelle date : " + sr.getExpirationYear());
+        System.out.println("ENRIGETREMENTS : " + SoftwareRegistration.getNumberOfRegistrations());
+
+        SoftwareRegistration sr1 = new SoftwareRegistration(2024);
+        System.out.println("ENRIGETREMENTS : " + SoftwareRegistration.getNumberOfRegistrations());
+
+        SoftwareRegistration sr2 = new SoftwareRegistration(2003);
+
+        System.out.println("ENRIGETREMENTS : " + SoftwareRegistration.getNumberOfRegistrations());
+    }
+}
+---------------------------------------------------------------------SoftwareRegistration.java
+public class SoftwareRegistration {
+    public SoftwareRegistration (int expiration)
+    {
+        if(mNumberOfRegistrations > 0)
+        {
+            this.mExpirationYear = expiration;
+            System.out.println("Enregistrement du produit, valide jusqu'en " + this.mExpirationYear);
+            mNumberOfRegistrations--;
+
+            System.out.println("Logiciel valide (expiration : " + this.mExpirationYear +")");
+            System.out.println("Enregistrements restants : " + mNumberOfRegistrations);
+        }
+        else{
+            System.out.println("Maximum de validation effectuée");
+        }
+
+    }
+    public int getExpirationYear()
+    {
+        return this.mExpirationYear;
+    }
+
+    public void setExpirationYear(int newExpiration)
+    {
+        this.mExpirationYear = newExpiration;
+    }
+
+    public static int getNumberOfRegistrations()
+    {
+        return mNumberOfRegistrations;
+    }
+
+    private int mExpirationYear;
+    private static int mNumberOfRegistrations = 2;
+}
+---------------------------------------------------------------------
+**Tableaux
+
+int tab[]; - int[] tab;
+int tab[] = {1, 2, 3};
+int tab[] = new int[3]; 
+int tab[] = new int[]{1, 2, 3};
+
+si on utilise int[] ou pourra créer plusieurs tableaux (int[] tab, tab1;)
+
+pour une matrice on le déclarera comme suit :
+
+int[][] tab = {{1,2,3}, {4,5,6}}
+int[][] tab = new int[3][2] //pour une matrice vide
+
+
+---------------------------------------------------------------------App.java
+import java.util.Arrays;
+
+public class App
+{
+    public static void main(String[] args)
+    {
+        int tab[] = {1, 2, 3};
+        System.out.println("Premier indice du tableau : " + tab[0] + "\n");
+
+        for(int i = 0 ; i < tab.length ; ++i)
+            System.out.println("Indice " + i + " = " + tab[i]);
+
+        System.out.println(" \nAffichage avec boucle for améliorée (for each) \n");
+
+        for(int number : tab)
+            System.out.println(number);
+
+            System.out.println("\nUne matrice : \n");
+
+        int[][] matrice = {
+            {1,2,3}, 
+            {4,5,6}
+        };
+
+        for(int i = 0 ; i < matrice.length ; ++i)
+            for(int j = 0 ; j < matrice[i].length ; ++j)
+                System.out.println("Indice premier tableau : " + i + " et indice du deuxième tableau : " + j + " = " + matrice[i][j]);
+
+        System.out.println("\nAffichage de la matrice avec boucle for améliorée (for each) \n");
+
+        for(int[] i : matrice)
+            for(int j : i)
+                System.out.println(j);
+
+        System.out.println("\nAffichage d'un tableau avec une méthode : \n");
+        int[] tableau = {1,2,3,4,5,6,7,8,9};
+        printTab(tableau);
+
+        System.out.println("\n");
+
+        int[] tab2 = new int[5];
+        Arrays.fill(tab2, 15);
+        for(int elements : tab2)
+            System.out.println(elements);
+    }
+
+    public static void printTab(int[] t)
+    {
+        for(int element : t)
+            System.out.println(element);
+    }
+}
+---------------------------------------------------------------------
+
+
+**Chaîne de caractères
+
+String s = "Hello"; ou String s = new String("Hello");
+
+String : immuable (contenu non modifiable)
+
+        String s = "Hello";
+        System.out.println(s);
+
+        s = "Bonjour";
+        System.out.println(s);
+
+ici on a créé une nouvelle chaîne de caractères, l'ancienne a été détruite et à chaque fois qu'on utilise des méthodes une nouvelle chaîne sera créer
+
+
+concat() -> plus rapide que " + "
+length() -> avec () obligation au contraire du tableau
+toUpperCase(), toLowerCase(), trim(), replace(), substring(), equals(), compareTo()
+
+equals(), compareTo() se diffèrent avec la méthode de comparaison la méthode compareTo() utilise une comparaison basé sur le code ASCII
+
+
+On ne pourra pas faire ceci sachant que les chaînes de caractères sont des tableaux " System.out.println(s[0]); " mais au lieu de ça on pourra utiliser la méthode charAt()
+
+
+-----------------------------------------------------------------------------------------App.java
+public class App {
+    public static void main(String[] args)
+    {
+        String s = "Hello";
+        System.out.println(s);
+
+        s = "Bonjour";
+        System.out.println(s);
+
+        String s2 = new String("tout le monde");
+        System.out.println(s + " " + s2);
+
+        String s3 = "      Yo !   ";
+        System.out.println(s.concat(" ").concat(s2));
+        System.out.println(s.length());
+        System.out.println(s.toLowerCase());
+        System.out.println(s.toUpperCase());
+        System.out.println(s3.trim());
+        System.out.println(s3.replace("o", "up"));
+        System.out.println(s.charAt(0));
+        System.out.println(s2.substring(5, 7));
+        System.out.println(s.equals(s3));
+        System.out.println(s.compareTo(s3));
+    }
+}
+-----------------------------------------------------------------------------------------
+
+
+pour la documentation Java : https://docs.oracle.com/en/java/javase/
+
+*StringBuffer et StringBuilder => mutable (contenu modifiable)
+
+sont des classes de l'objet String utilisés pour créer des chaînes de caractères modifiables. Il permet d'ajouter, d'insérer, de supprimer, de remplacer et d'inverser des caractères dans une chaîne.il y a une différence entre la capacité et la longueur du String dans ces 2 classes, la capacité changera au fur et à mesure du changement de la variable String
+
+Les deux sont les mêmes, la différence se trouve au niveau du thread-safe ; StringBuilder qui est monothreadé (manipule 1 seul thread) ce qui signifie qui est asynchrone et StringBuffer qui est multi-threading (manipule plusieurs threads) ce qui signifie qui est synchronisé
+
+
+length(), capacity(), append(), insert(<index>, <str>)
+
+
+*StringTokenizer : est utilisé pour diviser une chaîne en sous-chaînes (ou "jetons") en fonction d'un délimiteur spécifié. Il est principalement utilisé pour l'analyse de chaînes.
+
+pour récupérer le délimiteur aussi dans StringTokenizer on ajoutera "true" dans les paramètres
+
+
+*Le profiling en Java est le processus d'analyse du comportement et des caractéristiques de performance d'une application Java lors de son exécution. Contrairement au débogage, qui vise à résoudre les problèmes fonctionnels, le profiling se concentre sur l'identification des inefficacités de performance qui peuvent ralentir l'application sans nécessairement provoquer d'erreurs immédiates.
+
+*Objectifs du Profiling
+Améliorer la réactivité : En identifiant les goulots d'étranglement, les développeurs peuvent optimiser le code pour réduire les temps de réponse.
+Réduire la consommation de ressources : Le profiling aide à optimiser l'utilisation de la mémoire, du processeur et des autres ressources, ce qui peut réduire les coûts opérationnels.
+Meilleure expérience utilisateur : En améliorant les performances, les applications deviennent plus rapides et plus fiables.
+
+*Dimensions du Profiling
+Profiling CPU : Analyse les temps d'exécution des méthodes pour identifier les points chauds (hotspots) qui consomment beaucoup de puissance de traitement.
+Profiling de la mémoire : Suit l'allocation des objets et le ramassage des ordures pour détecter les fuites de mémoire et optimiser la gestion des objets.
+Profiling des threads : Étudie l'activité des threads pour identifier les conflits et optimiser la synchronisation.
+Profiling I/O : Analyse les opérations d'entrée-sortie pour optimiser les performances des opérations de lecture et d'écriture.
+
+Outils de Profiling
+Plusieurs outils sont disponibles pour le profiling Java, notamment :
+
+JVisualVM : Un outil open-source qui offre une interface intuitive pour suivre l'utilisation de la mémoire, du processeur et des threads.
+JProfiler : Un outil puissant qui permet le profiling en direct et fournit des visualisations pour comprendre l'utilisation de la mémoire.
+YourKit : Connue pour sa faible surcharge, elle permet d'attacher l'outil à une application en cours d'exécution.
+
+Méthodes de Profiling
+Échantillonnage : Prend des instantanés à intervalles réguliers pour obtenir une vue d'ensemble sans ralentir l'application.
+Instrumentation : Injecte du code supplémentaire pour suivre chaque appel de méthode, offrant des rapports détaillés mais pouvant ralentir l'application.
+
+
+-----------------------------------------------------------------------------------------MainApp.java
+import java.util.StringTokenizer;
+
+public class MainApp {
+    public static void main(String[] args)
+    {
+        String s = "news/titre-de-la-news/14";
+        StringTokenizer st = new StringTokenizer(s, "/");
+
+        while(st.hasMoreTokens())
+            System.out.println(st.nextToken());
+
+        StringBuilder sBuilder = new StringBuilder();
+        System.out.println(sBuilder.capacity());
+        System.out.println(sBuilder.length());
+
+        sBuilder.append(" tout le monde");
+        System.out.println(sBuilder);
+
+        sBuilder.insert(0, "Bonjour");
+        System.out.println(sBuilder);
+
+        StringBuffer sBuffer = new StringBuffer();
+        System.out.println(sBuffer.capacity());
+        System.out.println(sBuffer.length());
+
+        sBuffer.append(" tout le monde");
+        System.out.println(sBuffer);
+
+        sBuffer.insert(0, "Bonjour");
+        System.out.println(sBuffer);
+
+        String ss = "a";
+        String s2 = "b";
+
+        StringBuilder sb = new StringBuilder(ss).append(s2); //équivalent à sb = ss + s2;
+        System.out.println(sb);
+    }
+}
+-----------------------------------------------------------------------------------------
+
+**paquets
+
+-> Définition
+
+un package est une collection de classes, interfaces, et sous-packages liés, qui permet d'organiser et de structurer le code de manière efficace. Il s'agit d'un espace de noms unique qui aide à éviter les conflits de noms entre classes ou interfaces portant le même nom mais appartenant à des packages différents.
+
+
+-> Caractéristiques des Packages
+Déclaration : Pour déclarer qu'une classe appartient à un package, il faut commencer le fichier source par la directive package suivie du nom du package.
+Organisation : Les packages sont représentés par des répertoires sur le disque dur. Chaque classe doit être dans un fichier avec le même nom que la classe, et ce fichier doit être situé dans un répertoire correspondant au nom du package.
+Sous-packages : Un package peut contenir des sous-packages, créant ainsi une structure arborescente similaire à celle des répertoires.
+Nommage : Il existe des conventions pour nommer les packages, comme l'utilisation de noms en minuscules et le début par des préfixes spécifiques (par exemple, com, org, etc.) pour éviter les conflits.
+
+-> Avantages
+Réutilisabilité : Les packages facilitent la réutilisation du code en permettant d'importer facilement des classes entre différents projets.
+Gestion des Conflits de Noms : Les packages aident à résoudre les conflits de noms entre classes ou interfaces ayant le même nom mais appartenant à des packages différents.
+
+
+-------------------------------------------------------------------------------------------------------------chouchou\home\Player.java
+package chouchou.home;
+
+public class Player {
+    public Player()
+    {
+        System.out.println("Joueur instancié !");
+    }
+}
+-------------------------------------------------------------------------------------------------------------chouchou\home\Item.java
+package chouchou.home;
+
+public class Item {
+    public Item()
+    {
+        System.out.println("Item instancie !");
+    }
+}
+-------------------------------------------------------------------------------------------------------------App.java
+import chouchou.home.*;
+
+public class App {
+    public static void main(String[] args)
+    {
+        Item it = new Item();
+        Player p = new Player();
+    }
+}
+-------------------------------------------------------------------------------------------------------------
+
+
+
+Rq : 
+import nom_package.*; => inclusion totale de tous les packages
+import nom_package.nom_fichier; => inclusion d'un package selon l'utilité
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Lecture au clavier
+
+-> BufferedReader
+*** BufferedReader en Java est une classe qui permet de lire le texte à partir d'un flux d'entrée de caractères en mettant en mémoire tampon les caractères lus. Cela améliore l'efficacité de la lecture des caractères, des tableaux et des lignes. Elle est souvent utilisée pour lire des fichiers texte.
+
+read() => Cette méthode lit un caractère à la fois du flux et retourne sa valeur sous forme d'entier. Si la fin du flux est atteinte, elle retourne -1.
+readLine() => Cette méthode lit une ligne complète du flux de caractères et retourne cette ligne sous forme de chaîne de caractères.
+skip(N) => Cette méthode permet de sauter un nombre spécifié de caractères dans le flux. Elle déplace le lecteur en avant de n caractères, en ignorant les caractères sautés.
+
+-----------------------------------------------------------------------------------------------ExempleBufferReader.java
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class ExempleBufferReader {
+    public static void main(String[] args) throws Exception
+    {
+        InputStreamReader isr = new InputStreamReader(System.in);
+        BufferedReader br = new BufferedReader(isr);
+
+        System.out.println("Comment appeles-tu ?");
+        String name = br.readLine();
+        System.out.println("Bonjour " + name + " !");
+    }     
+}
+-----------------------------------------------------------------------------------------------
+
+
+-> Scanner
+***Scanner
+La classe Scanner en Java est utilisée pour lire et analyser les données à partir de diverses sources telles que la console, des fichiers, ou même des chaînes de caractères. Elle permet de traiter les entrées sous différentes formes, comme des entiers, des flottants, des booléens, ou des chaînes de caractères.
+
+nextLine() => Cette méthode lit une ligne complète du flux d'entrée jusqu'au prochain caractère de nouvelle ligne (\n, \r, \r\n) et renvoie cette ligne sous forme de chaîne de caractères. Elle ignore le caractère de nouvelle ligne lui-même.
+nextByte() => Lit le prochain élément du flux d'entrée et le convertit en un octet (byte).
+nextFloat() =>  Lit le prochain élément du flux d'entrée et le convertit en un nombre flottant (float).
+nextDouble() => Lit le prochain élément du flux d'entrée et le convertit en un nombre à virgule flottante (double).
+nextInt() => Lit le prochain élément du flux d'entrée et le convertit en un entier (int).
+nextBoolean() => Lit le prochain élément du flux d'entrée et le convertit en une valeur booléenne (boolean).
+
+
+-----------------------------------------------------------------------------------------------ExempleScanner.java
+import java.util.Scanner;
+
+public class ExempleScanner {
+    public static void main(String[] args) throws Exception
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Accéder à quel niveau ?");
+        int game_level = sc.nextInt();
+        
+        System.out.println("Niveau : " + game_level);
+    }     
+}
+-----------------------------------------------------------------------------------------------
+
+
+
+-> Différence entre BufferedReader et Scanner
+
+1. Utilisation
+Scanner : Utilisé principalement pour analyser et parser des données à partir d'un flux, permettant de convertir directement en types primitifs comme int, float, etc. Il est idéal pour la lecture de données structurées.
+BufferedReader : Conçu pour lire des flux de caractères de manière efficace en utilisant un tampon, ce qui réduit les accès au disque. Il est préférable pour lire des fichiers texte ou des lignes entières.
+
+2. Tamponnage
+Scanner : Dispose d'un tampon plus petit (1 KB) par rapport à BufferedReader. Cependant, le tampon peut être étendu si nécessaire.
+BufferedReader : Utilise un tampon plus grand (8 KB), ce qui améliore les performances lors de la lecture de fichiers.
+
+3. Vitesse
+Scanner : Plus lent en raison de ses capacités de parsing, ce qui nécessite plus de traitement.
+BufferedReader : Plus rapide car il se concentre uniquement sur la lecture des caractères sans parsing supplémentaire.
+
+4. Synchronisation
+Scanner : Non synchronisé, ce qui signifie qu'il n'est pas adapté pour un environnement multithreadé.
+BufferedReader : Synchronisé, ce qui le rend approprié pour les applications multithreadées.
+
+5. Exceptions
+Scanner : Cache les exceptions d'entrée/sortie, ce qui simplifie le code mais peut masquer des erreurs.
+BufferedReader : Lance immédiatement les exceptions d'entrée/sortie, permettant une gestion plus explicite des erreurs.
+
+6. Méthodes
+Scanner : Fournit des méthodes comme nextInt(), nextFloat(), nextBoolean() pour parser directement en types primitifs.
+BufferedReader : Utilise des méthodes comme readLine() pour lire des lignes entières, mais nécessite une conversion manuelle pour les types primitifs.
+
+-> Choix
+Utilisez Scanner lorsque vous avez besoin de parser des données en types primitifs ou lorsque la simplicité du code est prioritaire. Utilisez BufferedReader pour des performances optimales lors de la lecture de fichiers texte ou dans des environnements multithreadés.
+
+
+-----------------------------------------------------------------------------------------------------------------
+
+**Exceptions
+
+
+
+La méthode getMessage() est définie dans la classe java.lang.Throwable et est utilisée pour récupérer le message détaillé associé à une exception ou un objet Throwable. Ce message est généralement défini lors de la création d'une exception pour fournir des informations supplémentaires sur ce qui s'est passé.
+
+
+La méthode printStackTrace() est également définie dans la classe java.lang.Throwable et est utilisée pour afficher la pile d'appels (stack trace) d'une exception. Cette pile d'appels montre la séquence de méthodes qui ont conduit à l'exception, ce qui est très utile pour le débogage.
+
+
+
+--------------------------------------------------------------------------------------------------------------App.java
+import java.util.Scanner;
+import java.util.InputMismatchException;
+public class App {
+    public static void main(String[] args) {
+        try
+        {
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Année de naissance : ");
+            int yearOfBirth = sc.nextInt();
+            System.out.println(yearOfBirth);
+        }
+        catch(InputMismatchException e)
+        {
+            System.out.println("La date de naissance est invalide !");
+            // System.out.println(e.getMessage());
+            // e.printStackTrace();
+        }
+        finally
+        {
+            System.out.println("Fin du programme");
+        }
+    }
+}
+--------------------------------------------------------------------------------------------------------------
+
+
+-> Génération d'une exception 
+
+En Java, une exception est générée (ou "levée") lorsqu'un problème survient pendant l'exécution d'un programme, par exemple une division par zéro, un accès à un indice hors limites d'un tableau, ou une référence nulle. Pour générer manuellement une exception, on utilise le mot-clé throw suivi d'un objet qui est une instance d'une classe dérivée de Throwable (généralement une sous-classe de Exception). Par exemple :
+
+
+if (temperature > 40) {
+    throw new Exception("Il fait trop chaud !");
+}
+
+Ici, on force la génération d'une exception avec un message explicite.
+
+-> Propagation et déclaration des exceptions avec throws
+
+Lorsqu'une méthode peut générer une exception, elle peut la déclarer dans sa signature avec le mot-clé throws. Cela indique que la méthode peut propager cette exception à son appelant, qui devra alors la gérer ou la propager à son tour.
+
+Exemple :
+
+
+void maMethode() throws IOException {
+    // code qui peut générer IOException
+}
+
+
+-> Exceptions personnalisées
+* Qu’est-ce qu’une exception personnalisée en Java ?
+
+Une exception personnalisée est une classe d’exception définie par le développeur pour représenter des erreurs spécifiques à son application ou à son domaine métier, qui ne sont pas couvertes par les exceptions standard fournies par Java.
+
+* Pourquoi créer des exceptions personnalisées ?
+Pour mieux représenter des situations d’erreur spécifiques à votre logique métier.
+Pour rendre le code plus clair et faciliter la gestion des erreurs.
+Pour fournir des messages d’erreur plus explicites et adaptés.
+Pour distinguer différents types d’erreurs dans des blocs catch.
+
+* Comment créer une exception personnalisée ?
+
+Créer une classe qui hérite de Exception ou de RuntimeException selon que l’on souhaite une exception vérifiée (checked) ou non vérifiée (unchecked).
+Ajouter un constructeur qui accepte un message d’erreur et le transmet au constructeur de la classe mère.
+
+
+public class MonException extends Exception {
+    public MonException(String message) {
+        super(message);
+    }
+}
+
+Lever l’exception avec le mot-clé throw dans une méthode qui doit la déclarer avec throws si c’est une exception vérifiée :
+
+public void verifier(int valeur) throws MonException {
+    if (valeur < 0) {
+        throw new MonException("Valeur négative interdite");
+    }
+}
+
+Gérer l’exception avec un bloc try-catch
+
+try {
+    verifier(-10);
+} catch (MonException e) {
+    System.out.println("Erreur : " + e.getMessage());
+}
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Héritage
+
+
+super() => est utilisé pour référencer l'objet de la classe mère. Il permet d'accéder aux membres (champs, méthodes) de la superclasse, ce qui est particulièrement utile dans les cas d'héritage.
+instanceof => L'opérateur instanceof est utilisé pour vérifier si un objet est une instance d'une classe particulière ou d'une de ses sous-classes. Cela permet de s'assurer que l'objet peut être traité comme un membre de cette classe avant de le caster.
+
+
+
+-> Avant Héritage
+
+
+--------------------------------------------------------------------------------------------------------------jc\entities\Horse.java
+package jc.entities;
+
+public class Horse
+{
+    public Horse(String name)
+    {
+        this.mName = name;
+        this.mPosX = 50;
+        this.mPosY = 50;
+    }
+
+    public void move(int x, int y)
+    {
+        this.mPosX = x;
+        this.mPosY = y;
+        System.out.println("Le Cheval se déplace X = " + this.mPosX + ", Y = " + this.mPosY + ")");
+    }
+
+    private String mName;
+    private int mPosX;
+    private int mPosY;
+}
+--------------------------------------------------------------------------------------------------------------jc\entities\Pegasus.java
+package jc.entities;
+
+public class Pegasus
+{
+    public Pegasus(String name)
+    {
+        this.mName = name;
+        this.mPosX = 50;
+        this.mPosY = 50;
+        this.mPosZ = 100;
+    }
+
+    public void move(int x, int y)
+    {
+        this.mPosX = x;
+        this.mPosY = y;
+        System.out.println("Le Pégase se déplace X = " + this.mPosX + ", Y = " + this.mPosY + ")");
+    }
+
+    public void fly(int z)
+    {
+        this.mPosZ = z;
+        System.out.println("Le Pégase s'élève dans les airs Z = " + this.mPosX + ")");
+    }
+
+    private String mName;
+    private int mPosX;
+    private int mPosY;
+    private int mPosZ;
+}
+--------------------------------------------------------------------------------------------------------------App.java
+import jc.entities.*;
+
+public class App
+{
+    public static void main(String[] args)
+    {
+        Horse h = new Horse("Guero");
+        h.move(167, 428);
+
+        Pegasus p= new Pegasus("Titanus");
+        p.move(33, 146);
+        p.fly(466);
+    }
+}
+--------------------------------------------------------------------------------------------------------------
+
+
+->Après Héritage
+
+--------------------------------------------------------------------------------------------------------------jc\entities\Horse.java
+package jc.entities;
+
+public class Horse
+{
+    public Horse(String name)
+    {
+        this.mName = name;
+        this.mPosX = 50;
+        this.mPosY = 50;
+    }
+
+    public void move(int x, int y)
+    {
+        this.mPosX = x;
+        this.mPosY = y;
+
+        System.out.println("Le Cheval se déplace X = " + this.mPosX + ", Y = " + this.mPosY + ")");
+    }
+
+    protected String mName;
+    protected int mPosX;
+    protected int mPosY;
+    protected final int someData = 14;
+}
+--------------------------------------------------------------------------------------------------------------jc\entities\Pegasus.java
+package jc.entities;
+
+public final class Pegasus extends Horse
+{
+    public Pegasus(String name)
+    {
+        super(name);
+        this.mPosZ = 100;
+    }
+
+    public void move(int x, int y)
+    {
+        super.move(x, y);
+    }
+
+    public void fly(int z)
+    {
+        this.mPosZ = z;
+        System.out.println("Le Pégase s'élève dans les airs Z = " + this.mPosZ + ")");
+    }
+
+    private int mPosZ;
+}
+--------------------------------------------------------------------------------------------------------------App.java
+import jc.entities.*;
+
+public class App
+{
+    public static void main(String[] args)
+    {
+        Horse h = new Horse("Guero");
+        h.move(167, 428);
+
+        Pegasus p= new Pegasus("Titanus");
+        p.move(33, 146);
+        p.fly(466);
+
+        if(p instanceof Pegasus)
+            System.out.println("C'est un pégase");
+    }
+}
+--------------------------------------------------------------------------------------------------------------
+
+
+
+
+Rq : 
+final attribut, methode, classe, parametres
+ + on peut étendre des propres classes de Java comme Exception, StringBuilder ... 
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Classe abstraite
+
+-> Rôle des Classes Abstraites en Java
+
+Les classes abstraites en Java jouent un rôle crucial dans la programmation orientée objet (POO) en permettant de créer des classes qui ne peuvent pas être instanciées directement mais servent de base pour d'autres classes. Elles sont utilisées pour définir des méthodes communes et des champs qui seront partagés par toutes les sous-classes, tout en laissant certaines méthodes non implémentées pour être définies par les sous-classes.
+
+
+-> Avantages des Classes Abstraites
+
+Réutilisation de Code : Elles permettent de définir des méthodes et champs communs pour plusieurs sous-classes, réduisant ainsi la duplication de code.
+Polymorphisme : Elles facilitent le polymorphisme en permettant de traiter des objets de sous-classes différenciées comme s'ils étaient du même type (via une référence à la classe abstraite).
+Flexibilité et Extensibilité : Les classes abstraites offrent une structure commune tout en permettant aux sous-classes d'implémenter des fonctionnalités spécifiques.
+Versionnage Simplifié : Lorsque des modifications sont apportées à la classe abstraite, toutes les sous-classes en héritent automatiquement.
+
+
+-> Erreurs Communes
+
+Tentative d'instanciation d'une classe abstraite :
+
+Erreur : Essayer de créer un objet directement à partir d'une classe abstraite.
+Correction : Créez une classe concrète qui étend la classe abstraite et instanciez cette classe concrète.
+
+// Erreur
+public abstract class Animal { ... }
+Animal animal = new Animal(); // Erreur de compilation
+
+// Correction
+public class Chien extends Animal { ... }
+Chien chien = new Chien(); // Correct
+
+Oubli de déclarer une méthode abstraite :
+
+Erreur : Déclarer une classe avec des méthodes abstraites sans utiliser le mot-clé abstract.
+Correction : Ajoutez le mot-clé abstract à la classe.
+
+// Erreur
+public class Animal { public abstract void manger(); } // Manque abstract
+
+// Correction
+public abstract class Animal { public abstract void manger(); }
+
+Oubli de définir les noms des paramètres dans une méthode abstraite :
+
+Erreur : Déclarer une méthode abstraite sans nommer les paramètres.
+Correction : Nommez les paramètres.
+
+// Erreur
+public abstract void manger(int);
+
+// Correction
+public abstract void manger(int quantite);
+
+Classe abstraite finale :
+
+Erreur : Déclarer une classe à la fois abstract et final.
+Correction : Une classe ne peut pas être à la fois abstraite et finale, car elle ne peut pas être étendue.
+
+// Erreur
+public abstract final class Animal { ... } // Erreur de compilation
+
+// Correction
+public abstract class Animal { ... } // Correct
+
+Non-implémentation des méthodes abstraites dans les classes filles :
+
+Erreur : Oublier d'implémenter toutes les méthodes abstraites dans une classe fille.
+Correction : Implémentez toutes les méthodes abstraites ou déclarez la classe fille comme abstraite.
+
+
+
+-------------------------------------------------------------------------------------------chouchou\LivingSpecies.java
+package chouchou;
+
+abstract public class LivingSpecies
+{
+    protected String mName;
+
+    public String whoAmi()
+    {
+        return mName;
+    }
+
+    abstract public void eat();
+    abstract public void speak();
+}
+-------------------------------------------------------------------------------------------chouchou\Tiger.java
+package chouchou;
+
+public class Tiger extends LivingSpecies
+{
+    public Tiger()
+    {
+        mName = "Tigre";
+    }
+    public void eat()
+    {
+        System.out.println("Je mande de la viande...");
+    }
+    public void speak()
+    {
+        System.out.println("Je rugis...");
+    }
+}
+-------------------------------------------------------------------------------------------App.java
+import chouchou.*;
+
+public class App {
+    public static void main(String[] args)
+    {
+        // LivingSpecies ls = new LivingSpecies(); Erreur
+        Tiger t = new Tiger();
+        System.out.println(t.whoAmi());
+        t.eat();
+        t.speak();
+    }
+}
+-------------------------------------------------------------------------------------------
+
+
+Rq : + on peut creer une hierarchie des classes abstraites
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+** Interfaces
+
+-> Définition
+
+Une interface en Java est un type abstrait utilisé pour déclarer un comportement que les classes doivent implémenter. Elle est définie à l'aide du mot-clé interface et ne peut contenir que des signatures de méthodes et des constantes statiques et finales12. Toutes les méthodes d'une interface sont implicitement publiques et abstraites, bien que depuis Java 8, des méthodes par défaut et statiques puissent avoir une implémentation.
+
+
+-> Rôle
+
+Le rôle principal des interfaces est de définir un contrat que les classes doivent respecter lorsqu'elles les implémentent.
+
+Définition de comportements : Les interfaces permettent de spécifier des méthodes que les classes doivent implémenter, sans fournir l'implémentation elle-même.
+Simulation du multiple héritage : Puisque Java ne permet pas l'héritage multiple de classes, les interfaces permettent à une classe d'implémenter plusieurs interfaces, simulant ainsi le multiple héritage.
+Découplage : Les interfaces favorisent le découplage entre les classes et leurs utilisateurs, ce qui facilite la modification et l'évolution du code.
+Polymorphisme : Les interfaces permettent le polymorphisme, car une classe peut être référencée par le type de l'interface qu'elle implémente, ce qui permet de traiter des objets de classes différentes de manière uniforme.
+
+
+-> Interface fonctionnelle
+
+Une interface fonctionnelle en Java est une interface qui ne contient qu'une seule méthode abstraite, c'est-à-dire une seule méthode non implémentée. Cette caractéristique a été introduite dans Java 8 pour faciliter l'utilisation des expressions lambda et des références de méthodes.
+**Caractéristiques des interfaces fonctionnelles
+Une seule méthode abstraite : L'interface ne peut contenir qu'une seule méthode sans implémentation.
+Méthodes par défaut et statiques : Bien qu'il n'y ait qu'une seule méthode abstraite, une interface fonctionnelle peut inclure des méthodes par défaut et statiques qui ont une implémentation.
+Annotation @FunctionalInterface : Bien que non obligatoire, cette annotation peut être utilisée pour s'assurer que l'interface ne contient qu'une seule méthode abstraite. Si plusieurs méthodes abstraites sont ajoutées, le compilateur signalera une erreur.
+
+
+-> Méthode par défaut
+
+Une méthode par défaut dans une interface en Java est une méthode qui possède une implémentation par défaut. Cette fonctionnalité a été introduite dans Java 8 pour permettre aux interfaces d'évoluer sans casser les implémentations existantes. Une méthode par défaut est déclarée à l'aide du mot-clé default et doit avoir un corps, contrairement aux méthodes abstraites traditionnelles des interfaces qui n'ont pas d'implémentation.
+
+**Caractéristiques des méthodes par défaut
+Implémentation obligatoire : Une méthode par défaut doit avoir une implémentation dans l'interface elle-même.
+Utilisation du mot-clé default : La méthode doit être déclarée avec le mot-clé default pour indiquer qu'elle a une implémentation par défaut.
+Héritage automatique : Les classes qui implémentent une interface héritent automatiquement des méthodes par défaut si elles ne les implémentent pas explicitement.
+Surcharge possible : Les classes peuvent surcharger une méthode par défaut pour fournir leur propre implémentation.
+
+
+-------------------------------------------------------------------------------------------Vehicle.java
+package chouchou;
+
+abstract public class Vehicle {
+    protected int mMovementSpeed;
+
+    abstract public void moveXY(int x, int y);
+}
+-------------------------------------------------------------------------------------------Building.java
+package chouchou;
+
+abstract public class Building 
+{
+    abstract public void build(String material); 
+}
+-------------------------------------------------------------------------------------------Ship.java
+package chouchou;
+
+public class Ship extends Vehicle implements Flyable
+{
+    public Ship()
+    {
+        this.mMovementSpeed = 16;
+    }
+
+    public void moveXY(int x, int y)
+    {
+        System.out.println("Le navire brasse les flots et se déplace en " + x + ", " + y);
+    }
+
+    public void fly(String energy)
+    {
+        System.out.println("Je me propulse dans les airs avec du " + energy);
+    }
+}
+-------------------------------------------------------------------------------------------Glider.java
+package chouchou;
+public class Glider extends Vehicle
+{
+    public Glider()
+    {
+        this.mMovementSpeed = 28;
+    }
+
+    public void moveXY(int x, int y)
+    {
+        System.out.println("Le planneur fond l'air vers " + x + ", " + y);
+    }
+}
+-------------------------------------------------------------------------------------------Cottage.java
+package chouchou;
+
+public class Cottage extends Building implements Flyable
+{
+    public Cottage()
+    {
+        System.out.println("Parcelle en place...");
+    }
+    public void build(String material)
+    {
+        System.out.println("Construction du batiment en " + material);
+    }
+    public void fly(String energy)
+    {
+        System.out.println("Je me propulse dans les airs avec du " + energy);
+    }
+    public void test()
+    {
+        System.out.println("Le test du parcelle !");
+    }
+}
+-------------------------------------------------------------------------------------------Flyable.java
+package chouchou;
+
+interface Flyable
+{
+    public void fly(String energy);
+    default public void test()
+    {
+        System.out.println("Test");
+    }
+}
+-------------------------------------------------------------------------------------------App.java
+import chouchou.*;
+
+public class App
+{
+    public static void main(String[] args)
+    {
+        Cottage c = new Cottage();
+        c.build("bois");
+
+        Ship s = new Ship();
+        Glider g = new Glider();
+        s.moveXY(146, 97);
+        g.moveXY(80, 23);
+
+        c.fly("Carbone");
+        s.fly("Mana");
+
+        c.test();
+        s.test();
+    }
+}
+-------------------------------------------------------------------------------------------
+
+Rq : 	+ on peut créer une hierarchie des interfaces comme les classes abstraites
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Polymorphisme
+
+
+-> Définition
+
+Le polymorphisme en Java est un concept fondamental de la programmation orientée objet (POO) qui permet à un objet de prendre plusieurs formes. Cela signifie qu'un objet peut se comporter différemment selon le contexte dans lequel il est utilisé. Le polymorphisme est souvent utilisé avec l'héritage, où une classe enfant hérite des attributs et des méthodes d'une classe parente et peut les modifier ou les étendre pour effectuer différentes tâches.
+
+
+-> Types de Polymorphisme en Java
+Polymorphisme Statique (Liaison Statique) : Ce type de polymorphisme se produit au moment de la compilation. Il est principalement utilisé avec le surchargement de méthodes, où plusieurs méthodes ont le même nom mais des signatures différentes (différents paramètres).
+
+Polymorphisme Dynamique (Liaison Dynamique) : Ce type se produit au moment de l'exécution. Il est utilisé avec le remplacement de méthodes (overriding), où une méthode de la classe parente est redéfinie dans une classe enfant. La méthode à appeler est déterminée en fonction du type réel de l'objet référencé, et non du type de la référence elle-même.
+
+Exemple de Polymorphisme Dynamique
+
+class Animal {
+    public void cri() {
+        System.out.println("Le cri d'animaux");
+    }
+}
+
+class Chat extends Animal {
+    public void cri() {
+        System.out.println("meow, meow");
+    }
+}
+
+class Chien extends Animal {
+    public void cri() {
+        System.out.println("ouah, ouah");
+    }
+}
+
+public class MaClasse {
+    public static void main(String[] args) {
+        Animal animal = new Animal();
+        Animal chat = new Chat();
+        Animal chien = new Chien();
+        
+        animal.cri(); // Affiche "Le cri d'animaux"
+        chat.cri();   // Affiche "meow, meow"
+        chien.cri();  // Affiche "ouah, ouah"
+    }
+}
+ 
+
+surclassement(upcasting) : Le surclassement ou upcasting en Java est le processus de référencement d'un objet d'une classe enfant par une variable de type classe parente. Cela signifie qu'un objet d'une classe dérivée peut être traité comme s'il était de type de sa classe parente. Ce processus est toujours sûr et peut être effectué implicitement, car un objet d'une classe enfant est toujours une instance de sa classe parente.
+
+-> Exemple d'Upcasting
+class Animal {
+    public void cri() {
+        System.out.println("Le cri d'animaux");
+    }
+}
+
+class Chat extends Animal {
+    public void cri() {
+        System.out.println("meow, meow");
+    }
+}
+
+public class MaClasse {
+    public static void main(String[] args) {
+        // Upcasting : référencer un objet Chat avec une variable de type Animal
+        Animal chat = new Chat();
+        
+        chat.cri(); // Affiche "meow, meow"
+    }
+}
+
+Dans cet exemple, bien que chat soit référencé par une variable de type Animal, il appelle la méthode cri() définie dans la classe Chat, grâce au polymorphisme.
+
+-> Caractéristiques de l'Upcasting
+Sécurité : L'upcasting est toujours sûr car un objet d'une classe enfant est toujours une instance de sa classe parente.
+Implicite : Il peut être effectué sans cast explicite.
+Réduction des fonctionnalités : Lorsqu'un objet est upcasté, seules les méthodes et propriétés de la classe parente sont accessibles directement. Pour accéder aux méthodes spécifiques de la classe enfant, un downcasting est nécessaire.
+
+
+-> Utilisation de l'Upcasting
+L'upcasting est utile pour traiter des objets de classes différentes de manière uniforme, en utilisant les méthodes communes définies dans la classe parente. Cela permet de profiter du polymorphisme, où des objets de types différents peuvent être traités comme s'ils étaient du même type, tant qu'ils partagent un ancêtre commun.
+
+
+
+-------------------------------------------------------------------------------------------Vehicle.java
+package chouchou;
+
+abstract public class Vehicle {
+    protected int mMovementSpeed;
+
+    abstract public void moveXY(int x, int y);
+}
+-------------------------------------------------------------------------------------------Building.java
+package chouchou;
+
+abstract public class Building 
+{
+    abstract public void build(String material); 
+}
+-------------------------------------------------------------------------------------------Ship.java
+package chouchou;
+
+public class Ship extends Vehicle implements Flyable
+{
+    public Ship()
+    {
+        this.mMovementSpeed = 16;
+    }
+
+    public void moveXY(int x, int y)
+    {
+        System.out.println("Le navire brasse les flots et se déplace en " + x + ", " + y);
+    }
+
+    public void fly()
+    {
+        System.out.println("Le navire se propulse dans les airs" );
+    }
+}
+-------------------------------------------------------------------------------------------Glider.java
+package chouchou;
+public class Glider extends Vehicle
+{
+    public Glider()
+    {
+        this.mMovementSpeed = 28;
+    }
+
+    public void moveXY(int x, int y)
+    {
+        System.out.println("Le planneur fond l'air vers " + x + ", " + y);
+    }
+}
+-------------------------------------------------------------------------------------------Cottage.java
+package chouchou;
+
+public class Cottage extends Building implements Flyable
+{
+    public Cottage()
+    {
+        System.out.println("Parcelle en place...");
+    }
+    public void build(String material)
+    {
+        System.out.println("Construction du batiment en " + material);
+    }
+    public void fly()
+    {
+        System.out.println("La chaumière se propulse dans les airs");
+    }
+}
+-------------------------------------------------------------------------------------------Flyable.java
+package chouchou;
+
+interface Flyable
+{
+    public void fly();
+}
+-------------------------------------------------------------------------------------------App.java
+import chouchou.*;
+
+public class App
+{
+    public static void main(String[] args)
+    {
+        Vehicle[] someVehicles= new Vehicle[3];
+        Building[] someBuildings = new Building[2];
+        Flyable[] elements = {new Ship(), new Cottage(), new Cottage()}; // Polymorphisme Interface
+
+        someVehicles[0] = new Ship(); //upcasting
+        someVehicles[1] = new Ship();
+        someVehicles[2] = new Glider();
+        
+        someBuildings[0] = new Cottage();
+        someBuildings[1] = new Cottage();
+
+
+        someVehicles[0].moveXY(145, 89);
+        someVehicles[2].moveXY(169, 26);
+
+
+        for(Flyable e : elements) //réduire le code au lieu d'écrire objet.méthode()
+            e.fly();
+
+        /*  Au lieu d'utiliser ces lignes de codes on a utiliser la boucle
+            someVehicles[0].fly();
+            someBuildings[0].fly();
+            someBuildings[1].fly(); 
+        */
+    }
+}
+-------------------------------------------------------------------------------------------
+
+
+Ajout de Moto.java :
+
+-------------------------------------------------------------------------------------------Moto.java
+package chouchou;
+
+public class Moto extends Vehicle implements Flyable
+{
+    public Moto()
+    {
+        this.mMovementSpeed = 250;
+    }
+
+    public void moveXY(int x, int y)
+    {
+        System.out.println("Je vais super vite !!! en " + x + ", " + y);
+    }
+
+    public void fly()
+    {
+        System.out.println("Plein gaz, la moto décolle et s'en va dans les nuages");
+    }
+}
+-------------------------------------------------------------------------------------------App.java
+import chouchou.*;
+
+public class App
+{
+    public static void main(String[] args)
+    {
+        Vehicle[] someVehicles= new Vehicle[3];
+        Building[] someBuildings = new Building[2];
+        Flyable[] elements = {new Ship(), new Cottage(), new Cottage(), new Moto()}; // Polymorphisme Interface
+
+        someVehicles[0] = new Ship(); //upcasting
+        someVehicles[1] = new Ship();
+        someVehicles[2] = new Glider();
+        
+        someBuildings[0] = new Cottage();
+        someBuildings[1] = new Cottage();
+
+
+        someVehicles[0].moveXY(145, 89);
+        someVehicles[2].moveXY(169, 26);
+
+
+        for(Flyable e : elements) //réduire le code au lieu d'écrire objet.méthode()
+            e.fly();
+
+        /*  Au lieu d'utiliser ces lignes de codes on a utiliser la boucle
+            someVehicles[0].fly();
+            someBuildings[0].fly();
+            someBuildings[1].fly(); 
+        */
+    }
+}
+-------------------------------------------------------------------------------------------
+
+
+Rq : pour eviter d'ecrire objet.fly() on a utilisé le même principe des classes abstraites avec l'interface pour reduire le code
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+** Introduction Collections
+
+Les collections en Java sont un ensemble de classes et d'interfaces qui permettent de stocker et de manipuler des groupes d'objets. Elles font partie du Java Collections Framework (JCF), qui est un des frameworks les plus utilisés en Java pour gérer des données structurées. Les collections offrent une architecture pour stocker, rechercher, trier, insérer et supprimer des éléments, répondant ainsi aux besoins variés de stockage et de manipulation de données dans les applications Java.
+
+
+-> Principales Interfaces
+Les collections Java sont basées sur plusieurs interfaces clés :
+
+Collection : L'interface de base pour toutes les collections. Elle définit des méthodes comme add(), remove(), contains(), addAll(), clear(), isEmpty(), size(), etc.
+List : Une collection ordonnée où chaque élément a une position.
+Set : Une collection sans doublons, où chaque élément est unique.
+Map : Une collection de paires clé-valeur.
+Queue : Une collection qui suit le principe FIFO (First-In-First-Out).
+
+
+-> Classes de Collections
+Voici quelques-unes des classes les plus couramment utilisées pour chaque type de collection :
+
+*List
+ArrayList : Une liste dynamique basée sur un tableau. Elle est très performante pour les accès aléatoires.
+LinkedList : Une liste doublement chaînée. Elle est plus efficace pour les insertions et suppressions fréquentes.
+
+*Set
+HashSet : Un ensemble basé sur une table de hachage. Il est très rapide pour les recherches.
+TreeSet : Un ensemble basé sur un arbre binaire. Il conserve les éléments dans un ordre trié.
+
+*Map
+HashMap : Une carte basée sur une table de hachage. Elle est très rapide pour les recherches.
+TreeMap : Une carte basée sur un arbre binaire. Elle conserve les paires clé-valeur dans un ordre trié.
+
+*Queue
+LinkedList : Peut être utilisée comme une file d'attente.
+PriorityQueue : Une file d'attente prioritaire où les éléments sont ordonnés selon leur priorité.
+
+
+-> Fonctionnalités des Collections
+
+Stockage dynamique : Les collections peuvent être redimensionnées dynamiquement, contrairement aux tableaux.
+Manipulation des éléments : Ajout, suppression, recherche et tri des éléments.
+Parcours des éléments : Utilisation d'itérateurs ou de boucles pour parcourir les éléments.
+Gestion concurrente : Certaines collections, comme celles dans java.util.concurrent, permettent des accès concurrents sécurisés.
+
+-> Utilisation des Collections
+
+Gestion de données : Stockage et manipulation de données dans une application.
+Algorithmes : Tri, recherche, etc.
+Conception de logiciels : Utilisation dans des modèles de conception pour gérer des données structurées.
+
+collections.jpg classe.jpg 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Listes
+
+specifites.jpg
+
+ArrayList : mono-thread, accès direct, ne fonctionne pas avec les types primitives(int..), optimisée pour la lecture
+Capacité <= taille
+
+Description : ArrayList est une implémentation de la liste basée sur un tableau redimensionnable. Elle permet une croissance dynamique, ce qui signifie qu'elle peut augmenter ou diminuer de taille pour accommoder les éléments ajoutés ou supprimés.
+
+Utilisation : Utilisez ArrayList lorsque vous avez besoin d'un accès rapide aux éléments par leur index, car elle offre un accès aléatoire efficace.
+
+Méthodes principales :
+
+add(E e), add(int index, E e), addAll(Collection c), clear(), contains(Object o), get(int index), indexOf(Object o), remove(int index), remove(Object o), set(int index, E element), size(), sort(), toArray().
+
+------------------------------------------------------------------------------------------Cat.java
+public class Cat
+{
+    public Cat(String name)
+    {
+        this.mName = name;
+    }
+    public void meow()
+    {
+        System.out.println(this.mName + ": Meow !");
+    }
+    private String mName;
+}
+------------------------------------------------------------------------------------------App.java
+import java.util.ArrayList;
+
+public class App
+{
+    public static void main(String[] args)
+    {
+        ArrayList<Cat> group = new ArrayList<Cat>();
+
+        Cat c1 = new Cat("Toudoux");
+        Cat c2 = new Cat("Popy");
+        Cat c3 = new Cat("Maki");
+
+        group.add(c1);
+        group.add(c2);
+        group.add(c3);
+
+        System.out.println("Taille : " + group.size());
+            for(Cat c : group)
+            c.meow();
+
+        System.out.println(group.get(0));
+        group.remove(1);
+
+        for(Cat c : group)
+            c.meow();
+
+        group.clear();
+
+        for(Cat c : group)
+            c.meow();
+    }
+}
+------------------------------------------------------------------------------------------
+
+LinkedList : insertions rapides
+
+Description : LinkedList est une implémentation de liste doublement chaînée. Elle permet une insertion ou suppression efficace d'éléments aux extrémités, mais l'accès indexé peut nécessiter de parcourir la liste.
+
+Utilisation : Utilisez LinkedList lorsque vous avez besoin d'insérer ou de supprimer fréquemment des éléments aux extrémités de la liste.
+
+Méthodes principales :
+
+add(E e), add(int index, E e), addFirst(E e), addLast(E e), clear(), contains(Object o), get(int index), getFirst(), getLast(), indexOf(Object o), remove(int index), removeFirst(), removeLast(), set(int index, E element), size(), sort().
+
+------------------------------------------------------------------------------------------Cat.java
+public class Cat
+{
+    public Cat(String name)
+    {
+        this.mName = name;
+    }
+    public void meow()
+    {
+        System.out.println(this.mName + ": Meow !");
+    }
+    private String mName;
+}
+------------------------------------------------------------------------------------------App.java
+import java.util.LinkedList;
+import java.util.ListIterator;
+public class App
+{
+    public static void main(String[] args)
+    {
+        LinkedList<Cat> group = new LinkedList<Cat>();
+
+        Cat c1 = new Cat("Toudoux");
+        Cat c2 = new Cat("Popy");
+        Cat c3 = new Cat("Pilou");
+
+        group.add(c1);
+        group.add(c2);
+        group.addFirst(c3);
+
+        ListIterator<Cat> lit = group.listIterator();
+
+        while(lit.hasNext())
+            lit.next().meow();
+
+    }
+}
+------------------------------------------------------------------------------------------
+
+Vector : multi-thread, accès direct, optimisée pour la lecture
+
+
+Description : Vector est une classe héritée des premières versions de Java. Elle est similaire à ArrayList mais est synchronisée, ce qui la rend thread-safe mais moins performante.
+
+Utilisation : Utilisez Vector lorsque vous avez besoin de thread-safety, bien que ArrayList avec des synchronisations manuelles soit souvent préférée.
+
+Méthodes principales :
+
+add(E e), add(int index, E e), addElement(E e), clear(), contains(Object o), elementAt(int index), firstElement(), get(int index), indexOf(Object o), insertElementAt(E element, int index), lastElement(), remove(int index), remove(Object o), removeElement(Object obj), set(int index, E element), size(), sort().
+
+------------------------------------------------------------------------------------------Cat.java
+public class Cat
+{
+    public Cat(String name)
+    {
+        this.mName = name;
+    }
+    public void meow()
+    {
+        System.out.println(this.mName + ": Meow !");
+    }
+    private String mName;
+}
+------------------------------------------------------------------------------------------App.java
+import java.util.Vector;
+
+public class App
+{
+    public static void main(String[] args)
+    {
+        Vector<Cat> group = new Vector<Cat>();
+
+        Cat c1 = new Cat("Toudoux");
+        Cat c2 = new Cat("Popy");
+        Cat c3 = new Cat("Maki");
+
+        group.add(c1);
+        group.add(c2);
+        group.add(c3);
+
+        System.out.println("Capacité : " + group.capacity());
+        
+        for(Cat c : group)
+            c.meow();
+    }
+}
+------------------------------------------------------------------------------------------
+
+Stack : LIFO, multi-thread
+
+Description : Stack est une structure de données linéaire qui suit le principe LIFO (Last In, First Out). Elle est utilisée pour ajouter et supprimer des éléments du haut de la pile.
+
+Utilisation : Utilisez Stack lorsque vous avez besoin d'une structure de données LIFO.
+
+Méthodes principales :
+
+push(E item), pop(), peek(), empty(), search(Object o).
+
+------------------------------------------------------------------------------------------Cat.java
+public class Cat
+{
+    public Cat(String name)
+    {
+        this.mName = name;
+    }
+    public void meow()
+    {
+        System.out.println(this.mName + ": Meow !");
+    }
+    private String mName;
+}
+------------------------------------------------------------------------------------------App.java
+import java.util.Stack;
+import java.util.ListIterator;
+public class App
+{
+    public static void main(String[] args)
+    {
+        Stack<Cat> group = new Stack<Cat>();
+
+        Cat c1 = new Cat("Toudoux");
+        Cat c2 = new Cat("Popy");
+        Cat c3 = new Cat("Pilou");
+
+        group.push(c1);
+        group.push(c2);
+        group.push(c3);
+
+        ListIterator<Cat> lit = group.listIterator();
+
+        while(lit.hasNext())
+            lit.next().meow();
+
+        System.out.println("Instance : " + group.peek());
+        System.out.println("Sommet : ");
+        group.peek().meow();
+    }
+}
+------------------------------------------------------------------------------------------
+
+Différences
+Thread-Safety : Vector est synchronisé, ce qui le rend thread-safe, contrairement à ArrayList et LinkedList.
+
+Accès Indexé : ArrayList offre un accès indexé rapide, tandis que LinkedList nécessite de parcourir la liste pour accéder à un élément par son index.
+
+Insertion/Suppression : LinkedList est plus efficace pour insérer ou supprimer des éléments aux extrémités, tandis que ArrayList est plus efficace pour les accès aléatoires.
+
+Ordre LIFO : Stack suit le principe LIFO, ce qui le distingue des autres structures de données.
+
+
+*Itérateur :  Un itérateur en Java est un objet qui permet de parcourir une collection d'éléments, telle qu'une liste ou un ensemble, un élément à la fois. Il fait partie du Java Collections Framework et se trouve dans le paquetage java.util. Les itérateurs sont utilisés pour accéder aux éléments d'une collection de manière séquentielle sans exposer la structure sous-jacente de la collection12.
+
+Iterator
+L'interface Iterator propose trois méthodes principales :
+
+hasNext() : Retourne true si l'itération a plus d'éléments.
+
+next() : Renvoie l'élément suivant dans l'itération. Doit être appelé après hasNext() pour s'assurer qu'il existe un élément suivant.
+
+remove() : Supprime de la collection sous-jacente le dernier élément renvoyé par la méthode next(). Cette méthode est facultative et peut générer une UnsupportedOperationException si la collection ne prend pas en charge la suppression13.
+
+ListIterator
+ListIterator est une extension de l'interface Iterator spécifiquement conçue pour les listes. Elle permet de parcourir une liste dans les deux sens (avant et arrière) et propose des méthodes supplémentaires :
+
+hasPrevious() : Retourne true si la liste a un élément précédent.
+
+previous() : Renvoie l'élément précédent de la liste.
+
+add(E element) : Insère un élément juste avant l'élément renvoyé par la méthode next() ou après l'élément renvoyé par previous()3.
+
+Différences entre Iterator et ListIterator
+Sens de parcours : Iterator parcourt uniquement dans un sens (de l'avant vers l'arrière), tandis que ListIterator permet de parcourir dans les deux sens.
+
+Méthodes supplémentaires : ListIterator inclut des méthodes comme hasPrevious(), previous(), et add(E element) qui ne sont pas disponibles dans Iterator.
+
+Utilisation : Utilisez Iterator pour des collections générales comme des ensembles ou des listes lorsque le sens de parcours n'est pas important. Utilisez ListIterator pour les listes lorsque vous avez besoin de parcourir dans les deux sens ou d'insérer des éléments à des positions spécifiques7.
+
+Exemple d'utilisation de ListIterator
+
+import java.util.ArrayList;
+import java.util.ListIterator;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<String> lang = new ArrayList<>();
+        lang.add("Java");
+        lang.add("Python");
+        lang.add("PHP");
+        lang.add("C++");
+        lang.add("Perl");
+
+        // Création d'un ListIterator
+        ListIterator<String> iterator = lang.listIterator();
+
+        // Parcourir la liste en avant
+        System.out.println("Parcours en avant : ");
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next() + " ");
+        }
+
+        // Réinitialiser l'itérateur pour parcourir en arrière
+        iterator = lang.listIterator(lang.size());
+
+        // Parcourir la liste en arrière
+        System.out.println("Parcours en arrière : ");
+        while (iterator.hasPrevious()) {
+            System.out.println(iterator.previous() + " ");
+        }
+    }
+}
+
+RQ : 	des informations ordonnées, elles acceptent les doublons et les valeurs nulles
+	+Stack hérite de Vector
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Queues (Files)
+
+En Java, PriorityQueue est une classe qui implémente l'interface Queue et est utilisée pour stocker des éléments en fonction de leur priorité. Elle est basée sur la structure de données du tas, ce qui signifie que les éléments sont organisés de manière à ce que l'élément le plus prioritaire soit toujours en tête de la file d'attente.
+
+-> Caractéristiques de PriorityQueue
+Ordre des éléments : Les éléments sont stockés selon leur priorité, qui est déterminée par leur ordre naturel ou par un comparateur personnalisé. Par défaut, l'ordre est ascendant, ce qui signifie que l'élément avec la plus petite valeur est traité en premier.
+Insertion et suppression : Les éléments peuvent être ajoutés à l'aide des méthodes add() ou offer(), et supprimés avec remove() ou poll(). L'ordre d'insertion n'est pas pris en compte, seul la priorité est considérée.
+Accès aux éléments : Pour accéder à l'élément en tête de la file sans le supprimer, on utilise la méthode peek() ou element().
+
+
+Rq : pas de valeur nulle, pas d'acces direct (indice ou valeur), accepte des doublons, utilise seulement les éléments comparables, ordonnée, pas thread-safe, Elle peut également gérer des instances d'objets, à condition que ces objets soient comparables ou qu'un comparateur soit fourni lors de la création de la file.
+
+
+--------------------------------------------------------------App.java
+import java.util.PriorityQueue;
+import java.util.Iterator;
+public class App
+{
+    public static void main(String[] args)
+    {
+        PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
+        pq.add(155);
+        pq.add(0);
+        pq.add(8);
+        pq.add(8);
+        pq.add(365);
+        // pq.add(null); Erreur
+        pq.add(-14);
+
+        Iterator it = pq.iterator();
+
+        while(it.hasNext())
+        {
+            System.out.println(it.next());
+        }
+        System.out.println(pq.peek());
+        System.out.println(pq.element());
+
+        System.out.println(pq.poll());
+        System.out.println(pq.peek());
+    }
+}
+--------------------------------------------------------------
+
+
+ArrayDeque en Java est une classe qui implémente l'interface Deque (Double-Ended Queue), permettant d'ajouter ou de supprimer des éléments à la fois au début et à la fin de la structure de données. Elle est conçue pour être plus performante que d'autres implémentations comme LinkedList pour les opérations d'ajout et de suppression en tête et en fin de liste.
+
+***Opérations d'Ajout
+addFirst(E element) : Ajoute un élément au début du Deque. Si le Deque est plein, elle lève une IllegalStateException.
+addLast(E element) : Ajoute un élément à la fin du Deque. Si le Deque est plein, elle lève une IllegalStateException.
+offerFirst(E element) : Ajoute un élément au début du Deque et renvoie true si l'opération réussit, ou false si le Deque est plein.
+offerLast(E element) : Ajoute un élément à la fin du Deque et renvoie true si l'opération réussit, ou false si le Deque est plein.
+push(E element) : Ajoute un élément au début du Deque. Équivalent à addFirst.
+
+***Opérations de Suppression
+removeFirst() : Supprime et renvoie le premier élément du Deque. Si le Deque est vide, elle lève une NoSuchElementException.
+removeLast() : Supprime et renvoie le dernier élément du Deque. Si le Deque est vide, elle lève une NoSuchElementException.
+pollFirst() : Supprime et renvoie le premier élément du Deque, ou null si le Deque est vide.
+pollLast() : Supprime et renvoie le dernier élément du Deque, ou null si le Deque est vide.
+pop() : Supprime et renvoie le premier élément du Deque. Équivalent à removeFirst.
+
+***Opérations d'Accès
+peekFirst() : Renvoie le premier élément du Deque sans le supprimer, ou null si le Deque est vide.
+peekLast() : Renvoie le dernier élément du Deque sans le supprimer, ou null si le Deque est vide.
+peek() : Renvoie le premier élément du Deque sans le supprimer, ou null si le Deque est vide. Équivalent à peekFirst.
+
+
+
+--------------------------------------------------------------Player.java
+public class Player
+{
+    public Player(String name, int level)
+    {
+        this.mName = name;
+        this.mLevel = level;
+    }
+    public void hello()
+    {
+        System.out.println(this.mName + " dit bonjour !");
+    }
+    public String getName()
+    {
+        return this.mName;
+    }
+    private String mName;
+    private int mLevel;
+}
+--------------------------------------------------------------Main.java
+import java.util.ArrayDeque;
+import java.util.Iterator;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        ArrayDeque<Integer> adq = new ArrayDeque<Integer>();
+        adq.addFirst(4);
+        adq.addFirst(15);
+        adq.addLast(0);
+
+        Iterator it = adq.iterator();
+
+        while(it.hasNext()){System.out.println("Les éléments sont : " + it.next());}
+
+        adq.removeFirst();
+        Iterator it2 = adq.iterator();
+        while(it2.hasNext()){System.out.println("Les éléments après suppression : " + it2.next());}
+
+        System.out.println(adq.getFirst());
+        System.out.println(adq.peekFirst());
+
+
+        ArrayDeque<Integer> adqq = new ArrayDeque<Integer>();
+        adqq.addLast(4);
+        adqq.addLast(-84);
+        adqq.addLast(155);
+        adqq.addLast(4);
+        
+        adqq.removeLastOccurrence(4);
+        Iterator it3 = adqq.iterator();
+        while(it3.hasNext()){System.out.println("Eléments restants : " + it3.next());}
+
+        ArrayDeque<Player> tap = new ArrayDeque<Player>();
+        tap.addFirst(new Player("achraf", 50));
+
+        Iterator i = tap.iterator();
+        while(i.hasNext()){System.out.println(i.next());}
+    }
+}
+--------------------------------------------------------------
+
+
+
+Rq : accepte les doublons, orodonnée, pas thread-safe, refuse les valeurs nulles
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Ensembles (Sets)
+
+
+-> HashSet
+
+-> Caractéristiques de HashSet
+Stockage unique : HashSet ne permet pas de stocker des éléments en double. Chaque élément doit être unique.
+Table de hachage : Les éléments sont stockés en utilisant des codes de hachage, ce qui permet un accès rapide aux éléments.
+Pas d'ordre : Les éléments ne sont pas stockés dans un ordre particulier. L'ordre d'insertion n'est pas conservé.
+Valeur nulle autorisée : HashSet permet de stocker une valeur nulle.
+Performances : Les opérations de base comme add, remove, contains, et size sont effectuées en temps constant (O(1)) sous réserve que la fonction de hachage soit bien répartie.
+Non synchronisé : HashSet n'est pas synchronisé, ce qui signifie qu'il n'est pas thread-safe par défaut. Si plusieurs threads accèdent simultanément à un HashSet, il doit être synchronisé manuellement.
+
+
+-> Capacité et Facteur de charge
+
+En Java, la capacité et le facteur de charge (ou niveau de charge) sont deux paramètres importants pour les collections basées sur des tables de hachage, comme HashSet. 
+
+***Capacité
+Définition : La capacité est le nombre initial de cellules (ou "bacs") dans la table de hachage. C'est le nombre de places disponibles pour stocker les éléments avant que la table ne soit réorganisée.
+
+Constructeurs : Vous pouvez spécifier la capacité initiale lors de la création d'un HashSet en utilisant le constructeur HashSet(int initialCapacity). Par défaut, la capacité est de 16 si vous utilisez le constructeur sans paramètre HashSet().
+
+***Facteur de charge (Niveau de charge)
+Définition : Le facteur de charge est une mesure de combien la table de hachage peut être remplie avant d'être réorganisée (re-hachée). Il est exprimé sous forme de valeur flottante entre 0,0 et 1,0.
+
+Fonctionnement : Lorsque le nombre d'éléments dans la table de hachage dépasse le produit de la capacité actuelle et du facteur de charge, la table est re-hachée. Cela signifie que la capacité de la table est doublée pour accueillir plus d'éléments.
+
+Constructeurs : Vous pouvez spécifier le facteur de charge en utilisant le constructeur HashSet(int initialCapacity, float loadFactor). Par défaut, le facteur de charge est de 0,75 si vous utilisez un constructeur qui ne le spécifie pas explicitement.
+
+-> hashCode()
+Rôle : La méthode hashCode() retourne un entier représentant un code de hachage pour l'objet. Ce code est utilisé dans des structures basées sur des tables de hachage (comme les clés dans un HashMap ou les éléments d'un HashSet) pour déterminer où stocker l'objet.
+
+
+Contrat avec equals() :
+
+Si deux objets sont égaux selon la méthode equals(), ils doivent avoir le même code de hachage (hashCode()).
+Si deux objets ont des codes de hachage différents, ils ne peuvent pas être égaux.
+Cependant, si deux objets ont le même code de hachage, ils peuvent ou non être égaux (ceci est une collision).
+equals()
+
+-> equals()
+Rôle : La méthode equals() est utilisée pour comparer deux objets afin de déterminer s'ils sont "égaux". Par défaut, la méthode dans la classe Object compare les références mémoire (c'est-à-dire si les deux objets pointent vers la même instance).
+
+
+--------------------------------------------------------------------------------------App.java
+import java.util.HashSet;
+public class App 
+{
+    public static void main(String[] args) 
+    {
+        HashSet<Integer> hs = new HashSet<Integer>();
+
+        hs.add(15);
+        hs.add(-4);
+        hs.add(388);
+
+        if (hs.contains(388)){System.out.println("oui");}
+
+        hs.remove(388);
+
+        if (!(hs.contains(388))){System.out.println("non");}
+
+        hs.add(-4);
+
+        for(Integer nb : hs)
+            System.out.println(nb);
+    }   
+}
+--------------------------------------------------------------------------------------
+
+
+
+
+
+
+-> TreeSet
+
+
+En Java, TreeSet est une classe qui implémente l'interface SortedSet et utilise une structure d'arbre rouge-noir pour stocker ses éléments.
+
+
+-> Caractéristiques de TreeSet
+Stockage unique : TreeSet ne permet pas de stocker des éléments en double. Chaque élément doit être unique.
+Ordre trié : Les éléments sont stockés dans un ordre croissant par défaut, selon leur ordre naturel ou en fonction d'un comparateur fourni lors de sa création.
+Arbre rouge-noir : La structure sous-jacente est un arbre de recherche binaire auto-équilibré, ce qui garantit des performances élevées pour les opérations d'ajout, de suppression et de recherche.
+Pas de valeur nulle : TreeSet ne permet pas de stocker des valeurs nulles.
+Non synchronisé : TreeSet n'est pas synchronisé, ce qui signifie qu'il n'est pas thread-safe par défaut.
+Performances : Les opérations de base comme add, remove, et contains sont effectuées en temps logarithmique (O(log n)).
+
+-> compare()
+Définition : La méthode compare() fait partie de l'interface Comparator. Elle est utilisée pour définir un ordre personnalisé entre deux objets.
+
+Fonctionnement : Un objet qui implémente l'interface Comparator doit fournir une définition de la méthode compare(). Cette méthode retourne :
+
+Un entier négatif si le premier objet est "plus petit" que le second.
+Zéro si les deux objets sont égaux.
+Un entier positif si le premier objet est "plus grand" que le second.
+
+Utilisation dans TreeSet : Lorsqu'un Comparator est fourni au constructeur du TreeSet, ce dernier utilise la méthode compare() pour trier les éléments selon l'ordre défini par le comparateur.
+
+
+-> compareTo()
+
+Définition : La méthode compareTo() fait partie de l'interface Comparable. Elle est utilisée pour comparer deux objets afin de déterminer leur ordre naturel.
+
+Fonctionnement : Un objet doit implémenter l'interface Comparable pour fournir une définition de la méthode compareTo(). Cette méthode retourne :
+
+Un entier négatif si l'objet courant est "plus petit" que l'objet comparé.
+Zéro si les deux objets sont égaux.
+Un entier positif si l'objet courant est "plus grand" que l'objet comparé.
+
+Utilisation dans TreeSet : Si aucun Comparator n'est spécifié lors de la création du TreeSet, celui-ci utilise la méthode compareTo() des éléments pour les trier selon leur ordre naturel.
+
+--------------------------------------------------------------------------------------App.java
+import java.util.TreeSet;
+public class App 
+{
+    public static void main(String[] args) 
+    {
+        TreeSet<Integer> hs = new TreeSet<Integer>();
+
+        hs.add(15);
+        hs.add(-4);
+        hs.add(388);
+        hs.add(1);
+        hs.add(-1);
+        hs.add(155);
+        hs.add(-4220);
+
+        if (hs.contains(388)){System.out.println("oui");}
+
+        hs.add(-4);
+
+        for(Integer nb : hs)
+            System.out.println(nb);
+
+        System.out.println("Premier élément : " + hs.first());
+        System.out.println("Dernier élément : " + hs.last());
+        System.out.println("Premier Ensemble : " + hs.headSet(1));
+        System.out.println("Dernier Ensemble : " + hs.tailSet(1));
+        System.out.println("Mon propre ensemble : " + hs.subSet(-4, 388));
+    }   
+}
+--------------------------------------------------------------------------------------
+
+
+Rq : il n' y a pas d'acces direct dans TreeSet
+
+
+***Implémentation
+HashSet : Utilise une table de hachage (HashMap) pour stocker ses éléments. Cela permet des opérations rapides mais ne maintient pas d'ordre particulier.
+
+TreeSet : Utilise une structure d'arbre rouge-noir (TreeMap) pour stocker ses éléments. Cela permet un tri automatique des éléments.
+
+***Ordre des éléments
+HashSet : Ne maintient pas d'ordre particulier pour ses éléments. L'ordre d'insertion n'est pas garanti.
+
+TreeSet : Maintient les éléments dans un ordre trié. Par défaut, c'est l'ordre naturel (croissant) basé sur la méthode compareTo() de l'interface Comparable. Un ordre personnalisé peut être spécifié via un Comparator.
+
+***Comparaison des éléments
+HashSet : Utilise les méthodes equals() et hashCode() pour comparer les éléments et éviter les doublons.
+
+TreeSet : Utilise la méthode compareTo() pour trier les éléments. Si un Comparator est fourni, il utilise la méthode compare() pour déterminer l'ordre.
+
+***Éléments nuls
+HashSet : Autorise un seul élément nul.
+
+TreeSet : Ne permet pas les éléments nuls. Une tentative d'ajout d'un élément nul lève une NullPointerException.
+
+***Performances
+HashSet : Offre des performances généralement meilleures avec une complexité temporelle de O(1) pour les opérations d'insertion, de suppression et de recherche.
+
+TreeSet : A une complexité temporelle de O(log n) pour les mêmes opérations, ce qui est moins performant que HashSet mais nécessaire pour maintenir l'ordre.
+
+
+
+import java.util.Objects;
+
+public class Sport implements Comparable<Sport>{
+	private String libelle;
+	private String categorie;
+	private int niveau;
+	
+	public Sport(String libelle, String categorie, int niveau){
+		this.libelle = libelle;
+		this.categorie = categorie;
+		this.niveau = niveau;
+	}
+	
+	@Override
+	public int hashCode(){
+		return Objects.hash(libelle, categorie);
+	}
+	
+	@Override
+	public boolean equals(Object o){
+		if (this == o ) return true;
+		if ( o == null || getClass() != o.getClass()) return false;
+		
+		Sport p = (Sport) o;
+		
+		return this.niveau == p.niveau && Objects.equals(libelle, p.libelle) && Objects.equals(categorie, p.categorie);
+	}
+	
+	@Override
+	public String toString(){
+		return this.libelle + "(" + this.categorie + ")" + this.niveau;
+	}
+	
+	@Override
+	public int compareTo(Sport s){
+		int compCat = this.categorie.compareTo(s.categorie);
+		if (compCat != 0){
+			return compCat;
+		}
+		return this.libelle.compareTo(s.libelle);
+	}
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Map (cartes (clé-valeur))
+
+
+
+-> HashMap
+
+En Java, HashMap est une classe qui implémente l'interface Map et est utilisée pour stocker des paires clé-valeur. Elle est basée sur une table de hachage, ce qui lui permet d'offrir des performances rapides pour les opérations d'ajout, de suppression et de recherche d'éléments.
+
+
+-> Caractéristiques Principales de HashMap
+Collection non ordonnée : Contrairement à TreeMap, HashMap ne maintient pas l'ordre de ses entrées.
+Autorise les valeurs nulles : HashMap permet d'avoir une clé nulle et plusieurs valeurs nulles.
+Non synchronisé : Il n'est pas sûr pour les threads, ce qui signifie qu'il ne peut pas être utilisé simultanément par plusieurs threads sans risque de problèmes de concurrence. Pour un accès simultané, il est préférable d'utiliser ConcurrentHashMap.
+
+------------------------------------------------------------------App.java
+import java.util.HashMap;
+public class App 
+{
+    public static void main(String[] args)
+    {
+        HashMap<String, String> hm = new HashMap<String, String>();
+
+        hm.put("1", "Marc");
+        hm.put("2", "Luc");
+        hm.put("15", "achraf");
+        hm.put("3", "Julie");
+
+        System.out.println(hm.get("15"));
+
+        if(hm.containsKey("2")){System.out.println("La clé 2 existe");}
+        if(hm.containsValue("achraf")){System.out.println("achraf existe");}
+
+        for(String k : hm.keySet())
+            System.out.print("Les clés : " + k + " ");
+    }
+}
+------------------------------------------------------------------
+
+ Rq : pas doublons dans les clés, accès direct
+
+
+-> TreeMap
+
+En Java, TreeMap est une classe qui implémente l'interface Map et est utilisée pour stocker des paires clé-valeur de manière ordonnée. Elle est basée sur un arbre rouge-noir, ce qui permet de maintenir les entrées triées selon l'ordre naturel des clés ou en utilisant un comparateur personnalisé.
+
+
+-> Caractéristiques Principales de TreeMap
+Collection ordonnée : Contrairement à HashMap, TreeMap maintient ses entrées dans l'ordre croissant par défaut selon les clés.
+Pas de clé nulle : TreeMap ne permet pas d'avoir une clé nulle, mais il peut avoir plusieurs valeurs nulles.
+Non synchronisé : Comme HashMap, TreeMap n'est pas sûr pour les threads, ce qui signifie qu'il ne peut pas être utilisé simultanément par plusieurs threads sans risque de problèmes de concurrence.
+Implémentation de NavigableMap : TreeMap implémente également l'interface NavigableMap, ce qui permet des opérations avancées comme la recherche de la première ou de la dernière clé. 
+
+
+------------------------------------------------------------------App.java
+import java.util.TreeMap;
+import java.util.Map;
+
+public class App 
+{
+    public static void main(String[] args)
+    {
+        TreeMap<Integer, String> tm = new TreeMap<Integer, String>();
+
+        tm.put(1, "Marc");
+        tm.put(2, null);
+        tm.put(10, "achraf");
+        tm.put(3, "Julie");
+
+        System.out.println(tm.get(10));
+
+        for(String k : tm.values())
+            System.out.print("Les valeurs : " + k + " ");
+
+        System.out.println("");
+
+        for(Map.Entry<Integer, String> ent : tm.entrySet())
+            System.out.println("Clés : " + ent.getKey() + " - Valeurs : " + ent.getValue());
+    }
+}
+------------------------------------------------------------------
+ Rq : accès direct, ordonnée, seulement les valeurs nulles
+
+
+
+-> Map Entry
+
+En Java, une entrée dans une Map est représentée par l'interface Map.Entry, qui modélise une paire clé-valeur. Chaque entrée est unique en fonction de sa clé, et plusieurs entrées peuvent avoir la même valeur. L'interface Map.Entry fournit deux méthodes principales pour accéder aux composants d'une entrée :
+
+getKey() : Renvoie la clé de l'entrée.
+getValue() : Renvoie la valeur associée à la clé.
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+**Enumérations
+
+-> Définition : Une énumération en Java est un type de données particulier qui permet de définir un ensemble fini et nommé de constantes. Chaque valeur possible d'une variable de type énumération est une constante immuable et unique, ce qui signifie que la variable ne peut prendre que ces valeurs prédéfinies.
+
+-> Pourquoi utiliser une énumération en Java ?
+*Typage fort et sécurité : Contrairement aux constantes statiques ou aux chaînes de caractères ("magic strings"), les enums garantissent que seules les valeurs définies dans l'énumération peuvent être utilisées, ce qui évite les erreurs de type à la compilation et améliore la robustesse du code.
+*Lisibilité et maintenabilité : Les enums rendent le code plus lisible en utilisant des noms explicites pour les constantes. Ils facilitent aussi la maintenance car toutes les valeurs possibles sont centralisées dans une seule définition, ce qui simplifie les modifications et le refactoring.
+*Fonctionnalités avancées : Une énumération est en fait une classe spéciale qui hérite de java.lang.Enum. On peut donc lui ajouter des méthodes, des attributs, et même implémenter des interfaces. Cela permet d'encapsuler un comportement spécifique à chaque valeur d'énumération, comme dans le cas d'une machine d'état ou de stratégies différentes selon la valeur.
+*Utilisation dans les structures de contrôle : Les enums peuvent être utilisés dans les instructions switch de manière claire et sécurisée, ce qui améliore la gestion des cas possibles.
+*Immuabilité et sécurité : Les enums sont immuables, ce qui garantit que leurs valeurs ne peuvent pas être modifiées accidentellement, renforçant ainsi la cohérence et la sécurité de l'application.
+*Sérialisation cohérente : Les enums sont sérialisés de manière standard par Java, ce qui assure leur portabilité et intégrité lors de la transmission ou sauvegarde des données.
+
+-> Créer une Enum
+
+---------------------------------------------App.java
+public class App{
+	public static void main(String[] args){
+		Color c = Color.BLUE;
+	}
+}
+---------------------------------------------Color.java
+public enum Color{
+	RED, BLUE, GREEN;
+}
+---------------------------------------------
+
+N.B : En Java, une énumération (enum) hérite implicitement de la classe finale java.lang.Enum. Cela signifie qu'une énumération ne peut pas hériter d'une autre classe ni être étendue par une autre énumération. Autrement dit, il n'y a pas d'héritage possible entre enums. La classe java.lang.Enum est finale, donc aucune autre classe ne peut en hériter.
+
+
+-> Enrichir une Enum
+
+---------------------------------------------App.java
+public class App{
+	public static void main(String[] args){
+		Color c = Color.BLUE;
+		Color c1 = Color.RED;
+		Color c2 = Color.BLUE;
+		
+		if(c == c2){
+			System.out.println("Same Colors"); //Comparer 
+		} 
+		
+		System.out.println(c.toString());
+		
+		System.out.print("La valeur de la couleur verte : " + Color.RED.valueOf("GREEN") + "\n");
+		System.out.print("L'ordre de la couleur rouge : " + Color.RED.ordinal() + "\n");
+		System.out.print("Le nom de la couleur : " + Color.RED.name() + "\n");
+		
+		System.out.println("Parcours de l'Enum : ");
+		
+		for(Color colors : Color.values()){
+			System.out.println(colors);
+		}
+	}
+}
+---------------------------------------------Color.java
+public enum Color{
+	RED("Rouge", "FF0000"), BLUE("Bleu", "0000FF"), GREEN("Vert", "00FF00");
+	
+	private String name;
+	private String hexValue;
+	
+	Color(String name, String hexValue){
+		this.name = name;
+		this.hexValue = hexValue;
+	}
+	
+	@Override 
+	public String toString(){
+		return "La couleur " + this.name + "[" + this.hexValue + "]";
+	}
+	
+	public String getHexValue(){
+		return this.hexValue;
+	}
+}
+---------------------------------------------
+
+
+*ordinal() : Cette méthode retourne la position (l'indice) de la constante dans la déclaration de l'énumération.
+*valueOf(String name) : Méthode statique qui retourne la constante de l’énumération dont le nom correspond à la chaîne passée en paramètre.
+*name() : Retourne le nom exact de la constante telle qu’elle a été déclarée dans l’énumération, sous forme de chaîne de caractères.
+*values() : Méthode statique qui retourne un tableau contenant toutes les constantes de l'énumération, dans l'ordre de leur déclaration.
+*toString() : La méthode toString() en Java est une méthode définie dans la classe de base java.lang.Object, que toutes les classes Java héritent automatiquement. Son rôle principal est de fournir une représentation sous forme de chaîne de caractères d’un objet.
+Par défaut, la méthode toString() retourne une chaîne qui contient : Le nom de la classe de l’objet, Suivi du caractère @, Puis du code de hachage (hashcode) de l’objet en hexadécimal.
+
+-> Pourquoi redéfinir toString() ?
+Il est courant et recommandé de redéfinir (surcharger) la méthode toString() dans ses propres classes pour qu’elle renvoie une description claire et utile de l’objet, incluant par exemple les valeurs de ses attributs. Cela facilite la lecture des objets lors du débogage, de la journalisation ou simplement lors de l’affichage.
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+*Fichiers
+
+=> Lecture
+
+-> Qu’est-ce que API NIO 
+
+L’API NIO (New Input/Output) a été introduite dans Java 1.4 et étendue avec NIO 2 à partir de Java 7. Elle propose une approche plus moderne et performante pour gérer les entrées/sorties, notamment pour le système de fichiers, les lectures/écritures non bloquantes (non blocking I/O), et la manipulation des buffers, channels, et charsets.
+
+NIO 2 (Java 7+) améliore la gestion des fichiers et répertoires via le package java.nio.file, rendant plus simple l’accès au système de fichiers et ajoutant des fonctionnalités attendues depuis longtemps, comme la gestion des chemins, des liens symboliques, et des opérations asynchrones.
+
+
+---------------------------------------------------App.java
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.Files;
+import java.io.BufferedReader;
+import java.io.IOException;
+
+public class App{
+	public static void main(String[] args){
+		
+		Path p = Paths.get("infos.txt");
+
+		try{
+			BufferedReader bfr = Files.newBufferedReader(p);
+			
+			// System.out.println(bfr.read());
+			// bfr.skip(5);
+			// System.out.println(bfr.readLine());
+			
+			String ligne;
+            while ((ligne = bfr.readLine()) != null) {
+                System.out.println(ligne);
+            }
+		
+			bfr.close();
+		}
+		catch (IOException e){
+			System.out.println(e.getMessage());
+		}
+	}
+}
+---------------------------------------------------
+
+
+
+
+* Path : est une interface du package java.nio.file qui représente une abstraction d’un chemin dans un système de fichiers (fichier ou répertoire). C’est un remplaçant moderne et plus puissant de la classe File de l’ancienne API IO.
+* Paths : est une classe utilitaire qui fournit des méthodes statiques pour créer des objets Path. Par exemple, Paths.get("chemin/vers/fichier.txt") retourne un objet Path correspondant au chemin donné.
+* Files : est une classe utilitaire du package java.nio.file qui fournit de nombreuses méthodes statiques pour manipuler les fichiers et répertoires. Elle facilite la lecture, l’écriture, la copie, la suppression, la création, et la vérification d’existences de fichiers, entre autres.
+* readLine() : Cette méthode appartient à BufferedReader (API IO classique). Elle lit une ligne complète de texte jusqu’à un retour à la ligne et retourne cette ligne sous forme de chaîne. NIO ne fournit pas directement readLine(), mais on peut combiner un BufferedReader avec un Channel ou utiliser d’autres mécanismes pour lire ligne par ligne.
+*read() : est une méthode utilisée pour lire des données depuis un flux d’entrée (InputStream ou Reader). Elle lit soit un seul octet (pour InputStream), soit un tableau d’octets ou de caractères, et retourne le nombre d’éléments lus. Si la fin du flux est atteinte, elle retourne -1.
+* skip(long n) : Méthode de InputStream ou Reader en IO classique, elle permet de sauter (ignorer) n octets ou caractères dans le flux d’entrée.
+
+
+
+=> Ecriture
+
+
+* BufferedWritter : 
+
+
+
+----------------------------------------------------------------------App.java
+
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.Files;
+import java.io.BufferedWriter;
+import java.io.IOException;
+
+public class App{
+	public static void main(String[] args){
+		
+		Path p = Paths.get("infos.txt");
+
+		try{
+			BufferedWriter bfw = Files.newBufferedWriter(p);
+			
+			bfw.write("Bonjour");
+			bfw.newLine();
+			bfw.write(65); // caractère ASCII
+			bfw.newLine();
+			bfw.write("Achraf");
+			bfw.newLine();
+			bfw.write("Hello World!", 2, 5); // écrit une sous-chaîne de la chaîne
+		
+			bfw.close();
+		}
+		catch(IOException e){
+			System.out.println(e.getMessage());
+		}
+	}
+}
+
+----------------------------------------------------------------------
+
+
+
+* newLine() : écrit une séquence de fin de ligne dans le flux de sortie, c’est-à-dire un saut à la ligne.
+* write() : sert à écrire des caractères dans le flux de sortie.
+	write(int c) : écrit un seul caractère (le paramètre est un entier représentant un code Unicode).
+	write(String s) : écrit toute la chaîne de caractères s.
+	write(String s, int off, int len) : écrit une sous-chaîne de s, à partir de l’index off sur len caractères.
+	write(char[] cbuf) : écrit un tableau de caractères.
+
+
+
+-> Modes d'ouvertures
+
+
+* Qu’est-ce qu’un charset ?
+
+Le charset (jeu de caractères) en Java désigne l’ensemble de règles qui associent des caractères (lettres, chiffres, symboles) à des codes binaires (octets). Il permet de convertir du texte en bytes et inversement, ce qui est essentiel pour lire et écrire des fichiers texte, communiquer sur un réseau, etc.
+
+Par exemple, le charset UTF-8 encode chaque caractère Unicode en une séquence d’1 à 4 octets. D’autres charsets populaires : ISO-8859-1 (Latin-1), US-ASCII, UTF-16, etc.
+
+* L’énumération StandardOpenOption en Java fait partie de l’API NIO (java.nio.file) et définit un ensemble standard d’options pour spécifier comment ouvrir ou créer un fichier lors des opérations d’E/S (lecture, écriture, création, etc.).
+
+
+StandardOpenOption.READ : Ouvre le fichier en lecture.
+StandardOpenOption.WRITE : Ouvre le fichier en écriture.
+StandardOpenOption.APPEND : Écrit à la fin du fichier (mode ajout).
+StandardOpenOption.CREATE : Crée un nouveau fichier s’il n’existe pas.
+StandardOpenOption.CREATE_NEW : Crée un nouveau fichier, échoue si le fichier existe déjà.
+StandardOpenOption.TRUNCATE_EXISTING : Vide le fichier existant (taille à 0) avant d’écrire.
+StandardOpenOption.DELETE_ON_CLOSE : Supprime automatiquement le fichier à la fermeture du flux.
+StandardOpenOption.SPARSE : Indique que le fichier sera sparse (optimisation de stockage).
+StandardOpenOption.SYNC : Assure que les modifications sont synchronisées sur le disque.
+StandardOpenOption.DSYNC : Synchronisation des données (sans métadonnées).
+
+
+------------------------------------------------------------------------------------------App.java
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.Files;
+import java.nio.file.StandardOpenOption;
+import java.nio.charset.Charset;
+import java.io.BufferedWriter;
+import java.io.IOException;
+
+public class App{
+	public static void main(String[] args){
+		
+		Path p = Paths.get("infos.txt");
+		StandardOpenOption mode = StandardOpenOption.DELETE_ON_CLOSE;
+		Charset c = Charset.forName("UTF-8");
+
+		try{
+
+			BufferedWriter bfw = Files.newBufferedWriter(p, c, mode);
+			
+			bfw.write("Bonjour");
+			bfw.newLine();
+			bfw.write(65); // caractère ASCII
+			bfw.newLine();
+			bfw.write("Achraf");
+			bfw.newLine();
+			bfw.write("Hello World!", 2, 5); // écrit une sous-chaîne de la chaîne
+		
+			bfw.close();
+		}
+		catch(IOException e){
+			System.out.println(e.getMessage());
+		}
+	}
+}
+------------------------------------------------------------------------------------------
+
+
+
+-> Méthodes de manipulation de fichiers et répertoires
+
+*Répertoire et fichiers
+
+------------------------------------------------------------------------------------------App.java
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.Files;
+import java.io.IOException;
+
+public class App{
+	public static void main(String[] args){
+		
+		Path f = Paths.get("infos.txt");
+		
+		System.out.println(Files.exists(f));
+		
+		Path p = Paths.get("newFile.txt");
+		Path dir = Paths.get("Machin");
+		
+
+		try{
+			Files.createFile(p);
+			Files.createDirectory(dir);
+		}
+		catch(IOException e){
+			System.out.println(e.getMessage());
+		}
+		
+		System.out.println("Machin est un répertoire ? " + Files.isDirectory(dir));
+		System.out.println("newFile est un fichier ? " + Files.isRegularFile(p));
+	}
+} 
+------------------------------------------------------------------------------------------
+
+
+* Files.exists(Path path) : Vérifie si un fichier ou répertoire existe à l'emplacement spécifié. true si le chemin existe, sinon false. Ne lève pas d'exception si le chemin n'existe pas.
+* Files.createFile(Path path) : Crée un fichier vide à l'emplacement spécifié.
+* Files.createDirectory(Path path) : Crée un répertoire à l'emplacement spécifié.
+* Files.isDirectory(Path path) : Cette méthode retourne true si le chemin spécifié existe et correspond à un répertoire. Si le chemin n’existe pas ou n’est pas un répertoire, elle retourne false. Comme pour isRegularFile, elle peut lever une exception IOException.
+* Files.isRegularFile(Path path) : Cette méthode retourne true si le chemin spécifié existe et correspond à un fichier régulier. Un fichier régulier est un fichier classique contenant des données (texte, binaire, etc.), pas un répertoire, ni un lien symbolique, ni un fichier spécial (comme un socket ou un tube). Si le fichier n’existe pas ou n’est pas un fichier régulier, la méthode retourne false. Elle peut lever une exception IOException en cas d’erreur d’accès.
+
+
+
+* Déplacement des fichiers
+
+------------------------------------------------------------------------------------------App.java
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.Files;
+import java.io.IOException;
+
+public class MainApp{
+	public static void main(String[] args){
+		
+		Path fileSource = Paths.get("source.txt");
+		Path dir = Paths.get("Machin");
+		Path fileDestination = dir.resolve("dest.txt");
+		
+		try{
+			Files.move(fileSource, fileDestination);
+		}
+		catch(IOException e){
+			System.out.println(e.getMessage());
+		}
+	}
+}
+------------------------------------------------------------------------------------------
+
+* resolve() : permet de combiner un chemin avec un autre chemin ou un nom de fichier pour créer un chemin complet.
+* move() : déplace ou renomme un fichier ou un dossier d’un emplacement source vers un emplacement cible. On peut spécifier des options comme remplacer un fichier existant.
+
+
+
+* Copie et suppression des fichiers
+
+
+------------------------------------------------------------------------------------------App.java
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.Files;
+import java.io.IOException;
+
+public class MainApp{
+	public static void main(String[] args){
+		
+		Path fileSource = Paths.get("newFile.txt");
+		Path dir = Paths.get("Machin");
+		Path fileDestination = dir.resolve("copy.txt");
+		
+		Path fileToDelete = Paths.get("del.txt");
+		Path fileToCheckBeforeDelete = Paths.get("chdel.txt");
+		
+		try{
+			Files.copy(fileSource, fileDestination);
+			System.out.println("Taille : " + Files.size(fileSource));
+			Files.delete(fileToDelete);
+			Files.deleteIfExists(fileToCheckBeforeDelete);
+			
+		}
+		catch(IOException e){
+			System.out.println(e.getMessage());
+		}
+	}
+}
+------------------------------------------------------------------------------------------
+
+* copy() : crée une copie d’un fichier ou d’un dossier à un nouvel emplacement, avec possibilité d’options comme écraser un fichier existant.
+* size() : retourne la taille d’un fichier en octets, ce qui permet de connaître la quantité de données qu’il contient.
+* deleteIfExists() : supprime un fichier ou dossier s’il existe, sans générer d’erreur si le fichier est absent, et retourne un booléen indiquant si la suppression a eu lieu.
+* delete() : supprime un fichier ou dossier, mais lève une exception si le fichier n’existe pas, ce qui nécessite une gestion d’erreur.
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+* Généricité
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
