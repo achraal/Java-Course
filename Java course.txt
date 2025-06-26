@@ -2976,9 +2976,402 @@ public class MainApp{
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+* Dates et Durées
+
+=> Date et Heure
+
+-> Le point epoch (point de référence)
+
+Le point epoch (ou simplement epoch) en informatique désigne une date de référence à partir de laquelle le temps est mesuré par les systèmes d'exploitation et les langages de programmation. C’est le "temps zéro" à partir duquel on compte les unités de temps écoulées, généralement en secondes ou en millisecondes.
+
+Le point epoch le plus connu : Unix Epoch
+Le plus célèbre est le Unix Epoch, fixé au 1er janvier 1970 à 00:00:00 UTC. Depuis ce moment, le temps est compté en secondes écoulées (hors secondes intercalaires) dans la plupart des systèmes Unix et dérivés (Linux, macOS) ainsi que dans de nombreux langages de programmation comme C, Java, Python, JavaScript, PHP, etc..
+
+
+-> Pourquoi utiliser un point epoch ?
+Cette référence permet de représenter une date ou un instant précis par un simple nombre entier (le nombre d’unités de temps écoulées depuis l’epoch). Cela facilite le calcul des durées, la comparaison de dates, et évite les complications liées aux fuseaux horaires ou aux formats de date complexes.
+
+-> Limites et problèmes
+Un problème connu est le bug de l’an 2038 sur les systèmes Unix utilisant un entier signé 32 bits pour stocker le temps en secondes depuis l’epoch, car la valeur maximale sera dépassée le 19 janvier 2038.
+
+
+-> LocalDate
+
+
+------------------------------------------------------------------------------------------App.java
+import java.time.LocalDate;
+
+public class App{
+	public static void main(String[] args){
+		LocalDate date = LocalDate.EPOCH;
+		LocalDate todayDate = LocalDate.now();
+		LocalDate myDate = LocalDate.of(2003, 11, 28);
+		
+		System.out.println("Date epoch : " + date);
+		System.out.println("Date d'aujourd'hui : " + todayDate);
+		System.out.println("Votre date : " + myDate);
+		
+		System.out.println(" ");
+		System.out.println("Notre année est : " + todayDate.getYear());
+		System.out.println("Notre mois est : " + todayDate.getMonth() + " donc c'est le mois " + todayDate.getMonthValue());
+		System.out.println("Notre jour est : " + todayDate.getDayOfWeek() + " le " + todayDate.getDayOfMonth() );
+
+		System.out.println(" ");
+		
+		System.out.println("Notre date d'ajourd'hui est : " + todayDate);
+		todayDate = todayDate.plusYears(1);
+		todayDate = todayDate.plusMonths(11);
+		todayDate = todayDate.plusDays(5);
+		
+		System.out.println("On ajoute 1 année, 11 mois et 5 jours : " + todayDate);
+		
+		System.out.println(" ");
+		
+		System.out.println("Notre date est : " + todayDate);
+		todayDate = todayDate.minusYears(1);
+		todayDate = todayDate.minusMonths(6);
+		todayDate = todayDate.minusDays(5);
+		
+		System.out.println("Maintenant on retire 1 année, 6 mois et 5 jours : " + todayDate);
+	}
+}
+------------------------------------------------------------------------------------------
+
+
+* LocalDate est une classe immuable qui représente une date sans heure ni fuseau horaire, généralement sous la forme année-mois-jour (ex : 2025-06-25). Elle est utilisée pour manipuler des dates de manière simple et sûre, notamment pour des opérations sur le calendrier.
+* LocalDate.now() : Retourne la date actuelle selon l’horloge système et le fuseau horaire par défaut. Ne prend aucun paramètre.
+* LocalDate.of(int year, int month, int dayOfMonth) : Crée une instance de LocalDate pour une date précise. year : l’année (ex : 2025), month : le mois (1 à 12) ou via l’énumération Month (ex : Month.JANUARY), dayOfMonth : le jour du mois (1 à 31 selon le mois)
+* getYear() : Retourne l’année sous forme d’un entier.
+* getMonth() : Retourne le mois sous forme d’une instance de l’énumération Month (ex : JANUARY, FEBRUARY).
+* getDayOfWeek() : Retourne le jour de la semaine sous forme d’une instance de l’énumération DayOfWeek (ex : MONDAY, TUESDAY).
+* getDayOfMonth() : Cette méthode ne prend aucun paramètre et retourne un entier (int) correspondant au jour du mois, compris entre 1 et 31 selon la date.
+* plusYears(long years) : Ajoute un nombre d’années à la date.
+* plusMonths(long months) : Ajoute un nombre de mois.
+* plusDays(long days) : Ajoute un nombre de jours.
+* minusYears(long years) : Soustrait un nombre d’années.
+* minusMonths(long months) : Soustrait un nombre de mois.
+* minusDays(long days) : Soustrait un nombre de jours.
+
+
+
+-> LocalTime
+
+
+
+------------------------------------------------------------------------------------------App.java
+import java.time.LocalTime;
+
+public class App{
+	public static void main(String[] args){
+		LocalTime time = LocalTime.now();
+		LocalTime myTime = LocalTime.of(20, 11, 28);
+		
+		System.out.println("Heure d'aujourd'hui : " + time);
+		System.out.println("Votre date : " + myTime);
+		
+		System.out.println(" ");
+		System.out.println("Notre heure est : " + time.getHour());
+		System.out.println("Notre minute est : " + time.getMinute());
+		System.out.println("Notre seconde est : " + time.getSecond());
+		System.out.println("Notre nano-seconde est : " + time.getNano());
+
+		System.out.println(" ");
+		
+		System.out.println("Notre heure d'ajourd'hui est : " + time);
+		time = time.plusHours(1);
+		time = time.plusMinutes(11);
+		time = time.plusSeconds(5);
+		
+		System.out.println("On ajoute 1 heure, 11 minutes et 5 secondes : " + time);
+		
+		System.out.println(" ");
+		
+		System.out.println("Notre heure est : " + time);
+		time = time.minusHours(1);
+		time = time.minusMinutes(6);
+		time = time.minusSeconds(5);
+		
+		System.out.println("Maintenant on retire 1 heure, 6 minutes et 5 secondes : " + time);
+	}
+}
+------------------------------------------------------------------------------------------
+
+
+* LocalTime : est une classe du package java.time (introduite en Java 8) qui représente une heure locale sans date ni fuseau horaire. Elle stocke l’heure, les minutes, les secondes et les nanosecondes.
+* LocalTime.now() : Renvoie l’heure locale actuelle selon l’horloge système.
+* LocalTime.of(int hour, int minute, int second) : Crée une instance avec heure, minute et seconde.
+* LocalTime.of(int hour, int minute, int second, int nanoOfSecond) : Crée une instance avec heure, minute, seconde et nanoseconde.
+* getHour() : Retourne l’heure (0 à 23).
+* getMinute() : Retourne les minutes (0 à 59).
+* getSecond() : Retourne les secondes (0 à 59).
+* getNano() : Retourne les nanosecondes (0 à 999,999,999).
+* plusHours(long hours) : Ajoute un nombre d’heures.
+* plusMinutes(long minutes) : Ajoute un nombre de minutes.
+* plusSeconds(long seconds) : Ajoute un nombre de secondes.
+* plusNanos(long nanos) : Ajoute un nombre de nanosecondes.
+* minusHours(long hours) : Soustrait un nombre d’heures.
+* minusMinutes(long minutes) : Soustrait un nombre de minutes.
+* minusSeconds(long seconds) : Soustrait un nombre de secondes.
+* minusNanos(long nanos) : Soustrait un nombre de nanosecondes.
+
+
+
+
+-> LocalDateTime
+
+
+------------------------------------------------------------------------------------------App.java
+import java.time.LocalTime;
+import java.time.LocalDateTime;
+import java.time.LocalDate;
+
+public class App{
+	public static void main(String[] args){
+		LocalDateTime ldt = LocalDateTime.now();
+		
+		LocalTime myTime = LocalTime.of(20, 11, 28);
+		LocalDate myDate = LocalDate.of(2003, 11, 28);
+		LocalDateTime myDateTime = LocalDateTime.of(myDate, myTime);
+		
+				
+		System.out.println("Date et Heure d'aujourd'hui: " + ldt);
+		System.out.println("Date et Heure : " + myDateTime);
+		System.out.println("Autre Date et Heure : " + LocalDateTime.of(1999, 10, 20, 9, 10, 50));
+	}
+}
+------------------------------------------------------------------------------------------
+
+* LocalDateTime est une classe du package java.time (introduite en Java 8) qui représente une date et une heure sans fuseau horaire. Elle combine donc une date (LocalDate) et une heure (LocalTime) dans un seul objet. Elle contient : année, mois, jour, heure, minute, seconde, nanoseconde.
+* LocalDateTime.now() : Retourne la date et l’heure actuelles selon l’horloge système et le fuseau horaire par défaut.
+* LocalDateTime.of(...) : Permet de créer une instance de LocalDateTime avec des valeurs précises. Plusieurs surcharges sont possibles.
+
+
+N.B : Tous les méthodes utilisées sur LocalDate et LocalTime sont valables pour LocalDateTime (plusYears(), MinusHours(), getNano() ...)
+
+
+
+
+=> Durée
+
+
+-> Duration
+
+
+------------------------------------------------------------------------------------------App.java
+import java.time.LocalTime;
+import java.time.Duration;
+
+public class App{
+	public static void main(String[] args){
+		Duration du = Duration.ofHours(3).plusMinutes(30);
+		LocalTime time = LocalTime.of(10, 20, 15);
+		
+		System.out.println("Durée : " + du);
+		System.out.println("L'heure + Durée : " + time.plus(du));
+	}
+}
+------------------------------------------------------------------------------------------
+
+
+* Duration : Duration est une classe du package java.time qui représente une durée ou un intervalle de temps entre deux instants, exprimée en secondes et nanosecondes. Elle est utilisée pour manipuler des durées indépendamment des dates, par exemple pour mesurer des intervalles, des délais, ou des temps d’exécution.
+* plus() : permet d’ajouter une durée à une autre durée. Elle existe sous plusieurs formes.
+
+
+N.B : il existe plusieurs methodes à combiner comme Duration.between() ...
+
+
+
+-> Period
+
+
+
+------------------------------------------------------------------------------------------App.java
+import java.time.LocalDate;
+import java.time.Period;
+
+public class App{
+	public static void main(String[] args){
+		Period p = Period.of(3, 5, 3);
+		LocalDate date = LocalDate.of(2010, 2, 15);
+		
+		System.out.println("Période : " + p);
+		System.out.println("La date + période : " + date.plus(p));
+	}
+}
+------------------------------------------------------------------------------------------
+
+* Period : est une classe qui représente une quantité de temps basée sur la date, exprimée en années, mois et jours selon le calendrier ISO-8601.
+
+
+
+N.B : Différence entre Duration et Period => 
+* Duration
+Type de mesure : Temps basé sur des unités de temps (secondes, nanosecondes)
+Représentation : Intervalle précis exprimé en secondes et nanosecondes
+Usage typique : Mesurer des durées courtes ou précises, comme la différence entre deux instants (Instant, LocalDateTime)
+Comportement avec DST : Ajoute un nombre exact de secondes (ex : 1 jour = 24h exactes)
+Exemple d’utilisation : Mesurer le temps d’exécution d’un programme, ajouter 90 secondes à une heure
+
+* Period
+Type de mesure : Temps basé sur des unités de date (années, mois, jours)
+Représentation : Intervalle exprimé en années, mois et jours (calendrier)
+Usage typique : Mesurer des durées longues ou en termes de calendrier, comme la différence entre deux dates (LocalDate)
+Comportement avec DST : Ajoute un jour « conceptuel », qui peut varier selon le fuseau horaire et les changements d’heure (DST)
+Exemple d’utilisation : Calculer l’âge en années, mois et jours, ajouter 1 mois à une date
+
+
+
+
+=> Fuseau horaire
+
+* ZoneId : est une classe qui représente un fuseau horaire, c’est-à-dire une région géographique avec une heure standard commune. Par exemple, "Europe/Paris" ou "America/New_York" sont des identifiants de fuseau horaire. Cette classe contient toutes les règles nécessaires pour gérer les décalages horaires, y compris les changements saisonniers comme l’heure d’été ou d’hiver. Grâce à ZoneId, il est possible de savoir exactement quelle heure locale correspond à un instant donné dans un fuseau horaire précis.
+* ZonedDateTime : est une classe qui combine une date et une heure avec un fuseau horaire spécifique. Contrairement à LocalDateTime, qui ne contient pas d’information sur le fuseau, ZonedDateTime permet de représenter un moment précis dans le temps en tenant compte du décalage horaire. Par exemple, un ZonedDateTime peut représenter le 26 juin 2025 à 14h00 à Paris, avec le décalage horaire associé à ce fuseau. Cette classe gère également les cas complexes comme les heures qui se chevauchent ou disparaissent lors des passages à l’heure d’été ou d’hiver.
+
+
+------------------------------------------------------------------------------------------App.java
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+
+public class App{
+	public static void main(String[] args){
+		ZoneId zone = ZoneId.of("GMT+2");
+		LocalDate date = LocalDate.of(2001, 11, 16);
+		LocalTime time = LocalTime.of(15, 29, 59);
+		ZonedDateTime zdt = ZonedDateTime.of(date, time, zone);
+		
+		System.out.println("Votre zone : " + zone);
+		System.out.println("Votre fuseau horaire : " + zdt);
+		System.out.println("Notre fuseau horaire : " + ZonedDateTime.now());
+	}
+}
+------------------------------------------------------------------------------------------
+
+
+
+=> Formatage de dates
+
+
+* Le DateTimeFormatter est une classe de Java qui sert à formater (convertir en chaîne de caractères lisible) et à parser (analyser une chaîne pour en extraire une date ou une heure) des objets date-heure comme LocalDate, LocalTime, LocalDateTime, etc.
+* La méthode format() est utilisée sur un objet date-heure (ex : LocalDate) pour le convertir en une chaîne de caractères selon un format donné via un DateTimeFormatter.
+* ofPattern() : permet de créer un formateur de date/heure basé sur un modèle (pattern) personnalisé. Ce modèle est une chaîne de caractères composée de symboles qui représentent différentes parties de la date et de l’heure (jour, mois, année, heure, minute, etc.).
+
+
+------------------------------------------------------------------------------------------App.java
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class App{
+	public static void main(String[] args){
+		LocalDate ld = LocalDate.now();
+		LocalDateTime ldt = LocalDateTime.now();
+		ZonedDateTime zdt = ZonedDateTime.now();
+		
+		DateTimeFormatter ldfmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		DateTimeFormatter ldfmt2 = DateTimeFormatter.ofPattern("dd MMM uuuu");
+		DateTimeFormatter ldtfmt = DateTimeFormatter.ofPattern("E dd/MM/yyyy HH:MM:ss:SS (a)");
+		DateTimeFormatter zdtfmt = DateTimeFormatter.ofPattern("EEEE dd/MM/yyyy HH:MM:ss [zzzz | XXX]");
+		
+		String ldF = ld.format(ldfmt);
+		String ldF2 = ld.format(ldfmt2);
+		String ldtF = ldt.format(ldtfmt);
+		String zdtF = zdt.format(zdtfmt);
+		
+		System.out.println(ldF);
+		System.out.println(ldF2);
+		System.out.println(ldtF);
+		System.out.println(zdtF);
+	}
+}
+------------------------------------------------------------------------------------------
+
+
+y -> Année
+M -> Mois (6 ou Jun ou June)
+d -> Jour du mois	
+H -> Heure (0-23)	
+m -> Minutes	
+s -> Secondes	
+S -> Millisecondes	
+E -> Jour de la semaine (Tue ou Tuesday)
+a -> AM/PM	
+z -> Nom du fuseau horaire (PST)
+Z -> Décalage horaire (+0200)
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
 * Généricité
 
 
+-> Qu'est ce que la généricité ?
+
+La généricité en Java est un mécanisme de la programmation orientée objet qui permet de définir des classes, interfaces et méthodes capables de fonctionner avec différents types de données tout en assurant la sécurité de type à la compilation. Autrement dit, la généricité permet de paramétrer les types utilisés dans le code, ce qui évite les erreurs de type au moment de l'exécution et réduit la duplication de code pour différents types.
+
+-> Principes de la généricité en Java
+
+* Paramétrage par type : On peut définir une classe ou une méthode avec un ou plusieurs paramètres de type, par exemple <T>, qui seront remplacés par un type concret lors de l'utilisation. Cela permet d’écrire un algorithme ou une structure de données générique, utilisable avec n’importe quel type (Integer, String, etc.).
+* Sécurité de type à la compilation : Grâce à la généricité, le compilateur Java vérifie que seuls les types spécifiés sont utilisés, évitant ainsi les erreurs de cast et les exceptions à l’exécution.
+* Réduction du code redondant : Au lieu d’écrire plusieurs versions d’une même classe ou méthode pour différents types, on écrit une version générique qui s’adapte à tous les types.
+
+
+-> Qu'est ce qu'une class générique ?
+
+Une classe générique en Java est une classe dont la définition est paramétrée par un ou plusieurs types, appelés paramètres de type. Cela signifie que la classe peut manipuler des objets de différents types sans avoir à écrire plusieurs versions spécifiques de cette classe. Le type exact est spécifié lors de la création d'une instance de la classe, ce qui permet d'assurer la sécurité de type à la compilation et d'éviter les conversions de type explicites (casts).
+
+
+-> Limites
+
+
+1. Interdiction de créer des tableaux génériques
+Il est interdit de créer des tableaux dont les éléments sont de type générique, par exemple :
+
+T[] array = new T[10]; // interdit
+Cette limitation vient du fait que Java utilise l’effacement de type (type erasure) pour les génériques, ce qui empêche de connaître le type réel à l’exécution pour vérifier la sécurité des tableaux.
+
+On peut déclarer des tableaux de références génériques, mais pas les instancier directement :
+
+List<String>[] array = new List[10]; // autorisé avec avertissement
+
+2. Interdiction des tests d’instance sur des types génériques
+Les expressions instanceof ne peuvent pas être utilisées avec des paramètres de type générique :
+
+if (obj instanceof T) { ... } // interdit
+Cela est dû à l’effacement de type qui supprime l’information sur le type générique à l’exécution.
+
+3. Transtypages (casts) non sûrs
+Les conversions (casts) impliquant des types génériques produisent des avertissements de compilation (unchecked cast) car la vérification complète ne peut pas être faite à l’exécution.
+
+Cela peut entraîner des erreurs à l’exécution si le cast est incorrect.
+
+4. Interdiction des classes génériques d’exceptions
+On ne peut pas définir une classe d’exception générique, par exemple :
+
+public class MyException<T> extends Exception { } // interdit
+Cela est lié au mécanisme d’effacement de type et à la gestion des exceptions par le JVM.
+
+5. Pas de types primitifs comme paramètres génériques
+Les types primitifs (int, double, etc.) ne peuvent pas être utilisés directement comme arguments de type générique.
+
+Il faut utiliser leurs classes enveloppes (Integer, Double, etc.), avec autoboxing qui facilite la conversion automatique.
+
+6. Pas d’instanciation directe de types génériques
+On ne peut pas faire new T() dans une classe générique car le type réel de T n’est pas connu à l’exécution.
+
+7. Pas de variables statiques de type générique
+Les variables ou méthodes statiques ne peuvent pas utiliser directement le paramètre de type générique de la classe.
+
+8. Incompatibilité avec le code non générique (legacy)
+La coexistence avec du code Java non générique (avant Java 5) peut entraîner des avertissements et des conversions non sûres.
+
+9. Absence de covariance des classes génériques
+Contrairement aux tableaux, les classes génériques ne sont pas covariantes : par exemple, List<Dog> n’est pas un sous-type de List<Animal>, même si Dog hérite de Animal.
 
 
 
@@ -2986,17 +3379,514 @@ public class MainApp{
 
 
 
+--------------------------------------------------------------------------------Color.java
+public enum Color{
+	RED("Rouge"), WHITE("Blanc"), GREEN("Vert");
+	
+	private String name;
+	
+	Color(String name){
+		this.name = name;
+	}
+	
+	@Override
+	public String toString(){
+		return this.name;
+	}
+}
+--------------------------------------------------------------------------------Fruit.java
+public class Fruit{
+	private String name;
+	private int quantity;
+	
+	public Fruit(String name, int quantity){
+		this.name = name;
+		this.quantity = quantity;
+	}
+
+	public Fruit(String name){
+		this.name = name;
+		this.quantity = 0;
+	}
+	
+	public String getName(){
+		return this.name;
+	}
+	
+	public int getQuantity(){
+		return this.quantity;
+	}
+	
+	@Override
+	public String toString(){
+		return this.name + " de quantité " + this.quantity;
+	}
+}
+--------------------------------------------------------------------------------Vegetable.java
+public class Vegetable{
+	private String name;
+	private Color color;
+	
+	public Vegetable(String name, Color color){
+		this.name = name;
+		this.color = color;
+	}
+
+	public Vegetable(String name){
+		this.name = name;
+		this.color = Color.WHITE;
+	}
+	
+	public String getName(){
+		return this.name;
+	}
+	
+	public Color getColor(){
+		return this.color;
+	}
+	
+	@Override
+	public String toString(){
+		return this.name + " de couleur " + this.color;
+	}
+}
+--------------------------------------------------------------------------------Drink.java
+public class Drink{
+	private String name;
+	
+	public Drink(String name){
+		this.name = name;
+	}
+	
+	public String getName(){
+		return this.name;
+	}
+	
+	@Override
+	public String toString(){
+		return this.name;
+	}
+	
+}
+--------------------------------------------------------------------------------Basket.java
+public class Basket<E>{
+	private E item;
+	
+	public Basket (E item){
+		this.item = item;
+	}
+	
+	public E getItem(){
+		return this.item;
+	}
+}
+--------------------------------------------------------------------------------App.java
+import java.util.List;
+import java.util.ArrayList;
+
+public class App{
+	public static void main(String[] args){
+		Fruit f = new Fruit("Strawberry", 10);
+		Vegetable v = new Vegetable("Cucumber", Color.GREEN);
+		Drink d = new Drink("Water");
+		
+		Basket<Fruit> bf = new Basket(f);
+		Basket<Vegetable> bv = new Basket(v);
+		Basket<Drink> bd = new Basket(d);
+		
+		System.out.println("Le panier contient le fruit : " + bf.getItem());
+		System.out.println("Le panier contient le légume : " + bv.getItem());
+		System.out.println("Le panier contient la boisson : " + bd.getItem());
+		
+		System.out.println("");
+		
+		
+		List<Fruit> lf = new ArrayList<>();
+		
+		Fruit f2 = new Fruit("Cherry");
+		Fruit f3 = new Fruit("Banana");
+		Fruit f4 = new Fruit("Blueberry");
+		
+		lf.add(f2);
+		lf.add(f3);
+		lf.add(f4);
+		
+		List<Vegetable> lv = new ArrayList<>();
+		
+		Vegetable v2 = new Vegetable("Cabbage", Color.RED);
+		Vegetable v3 = new Vegetable("Leeks", Color.GREEN);
+		Vegetable v4 = new Vegetable("Endive", Color.WHITE);
+		
+		lv.add(v2);
+		lv.add(v3);
+		lv.add(v4);
+		
+		printList(lf);
+		printList(lv);
+	}  
+
+	public static void printList(List<?> li){
+		for(Object items : li)
+			System.out.println(items);
+	}
+}
+--------------------------------------------------------------------------------
 
 
 
 
 
 
+=> Générique à plusieurs types paramétrés
+
+Une classe générique à plusieurs types paramétrés en Java est une classe dont la définition inclut plusieurs paramètres de type, permettant ainsi de manipuler plusieurs types différents de manière sécurisée et flexible dans une même classe.
+
+* Principe
+
+La déclaration d’une classe générique peut comporter plusieurs paramètres de type, séparés par des virgules, par exemple <T1, T2>. Chaque paramètre de type agit comme une variable de type indépendante que l’on peut utiliser dans la définition des attributs, méthodes, et constructeurs de la classe. Lors de l’instanciation de la classe, on précise les types concrets pour chacun des paramètres.
+
+* Exemple concret : Dans cet exemple, la classe Paire est générique avec deux paramètres de type T1 et T2. Cela permet d’associer deux objets de types différents dans une même instance.
+
+
+public class Paire<T1, T2> {
+    private T1 premier;
+    private T2 second;
+
+    public Paire(T1 premier, T2 second) {
+        this.premier = premier;
+        this.second = second;
+    }
+
+    public T1 getPremier() {
+        return premier;
+    }
+
+    public T2 getSecond() {
+        return second;
+    }
+}
+
+* Utilisation :
+
+Paire<String, Integer> paire = new Paire<>("âge", 30);
+String cle = paire.getPremier(); // "âge"
+Integer valeur = paire.getSecond(); // 30
+
+
+
+
+N.B : On peut aussi appliquer des bornes aux paramètres de type, par exemple <T1 extends Number, T2>, pour restreindre les types acceptés. Cette fonctionnalité est disponible depuis Java 5 et est largement utilisée dans les collections et autres API Java.
+
+
+
+
+=> Types bornées avec les génériques
+
+
+En Java, un type borné (ou paramètre de type borné) dans la généricité permet de restreindre les types que l'on peut utiliser comme arguments pour un paramètre de type générique. Cela signifie que le type utilisé doit être une sous-classe (ou implémenter une interface) spécifique, ce qui permet d'appeler en toute sécurité les méthodes définies dans cette borne.
+
+
+* Syntaxe
+Pour borner un paramètre de type par une classe ou une interface, on utilise le mot-clé extends :
+
+
+public class MaClasse<T extends Number> {
+    // T doit être Number ou une sous-classe de Number
+}
+
+On peut borner par plusieurs interfaces (mais une seule classe), en les séparant par & :
+
+
+public class MaClasse<T extends Serializable & Comparable<T>> {
+    // T doit implémenter Serializable et Comparable
+}
+
+
+
+-> Wildcards bornés (types sauvages)
+En plus des paramètres de type, on peut utiliser des bornes avec les wildcards pour les collections :
+
+List<? extends Number> : une liste d’objets de type Number ou ses sous-classes (borne supérieure).
+List<? super Integer> : une liste d’objets de type Integer ou ses super-classes (borne inférieure).
 
 
 
 
 
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+* Threads
+
+
+-> Qu'est ce qu'un thread ?
+
+
+Les threads en Java sont des unités d'exécution indépendantes qui font partie d'un programme et s'exécutent de manière autonome et parallèle aux autres threads dans le même processus. Ils permettent d'exécuter plusieurs séquences d'instructions simultanément dans un même espace d'adressage, ce qui facilite la programmation concurrente.
+
+Un thread est représenté par une instance de la classe Thread ou par une classe qui implémente l'interface Runnable. La méthode principale à redéfinir est run(), qui contient le code que le thread exécutera. Pour démarrer un thread, on appelle la méthode start(), qui lance l'exécution parallèle du thread en invoquant run().
+
+Il existe deux façons principales de créer un thread en Java :
+
+En étendant la classe Thread et en redéfinissant la méthode run().
+En implémentant l'interface Runnable et en passant une instance de cette classe à un objet Thread.
+
+
+=> Thread
+
+
+-------------------------------------------------------------App.java
+import java.lang.Thread;
+
+public class App extends Thread{
+	public static void main(String[] args) throws InterruptedException{
+	
+		App task = new App();
+		App task2 = new App();
+		
+		task.start();
+		task2.start();
+		
+		task.join();
+		task2.join();
+		
+		System.out.println("Tous les traitements sont terminés");
+	}
+	
+	@Override
+	public void run(){
+		for(int i = 0 ; i < 5 ; ++i){
+			System.out.println(i);
+			
+			try{
+				Thread.sleep(1500);
+			}
+			catch (InterruptedException e){
+				System.out.println(e.getMessage());
+			}
+		}
+
+	}
+}
+-------------------------------------------------------------
+
+
+* start() : C'est une méthode de la classe Thread qui sert à démarrer un nouveau thread d'exécution. Lorsqu'on appelle start(), un nouveau thread est créé et la méthode run() associée au thread est exécutée dans ce nouveau thread, de manière concurrente avec le thread appelant. La méthode start() ne bloque pas le thread appelant, elle lance simplement l'exécution parallèle.
+* join() : Cette méthode permet à un thread d'attendre la fin d'exécution d’un autre thread. Par exemple, si le thread A appelle threadB.join(), alors A sera bloqué jusqu'à ce que le thread B ait terminé son exécution. Cela sert à synchroniser l'exécution entre plusieurs threads pour s'assurer qu'un thread ne continue pas avant qu'un autre ait fini (information générale, join() est une méthode standard de Thread).
+* sleep(long millis) : C'est une méthode statique de la classe Thread qui suspend l'exécution du thread courant pendant un certain nombre de millisecondes spécifié en argument. Cela permet de faire une pause volontaire dans l'exécution d'un thread sans le bloquer définitivement. sleep() peut lancer une exception InterruptedException si le thread est interrompu pendant sa pause (information générale).
+* InterruptedException : C'est une exception vérifiée en Java qui est levée lorsqu'un thread en sommeil (sleep()) ou en attente (wait(), join()) est interrompu par un autre thread via la méthode interrupt(). Elle sert à gérer proprement l'interruption d'un thread bloqué, permettant de réagir ou de terminer son exécution (information générale).
+
+
+
+
+=> Runnable
+
+
+* L'interface Runnable en Java est une interface fonctionnelle qui déclare une seule méthode abstraite : run(). Elle sert à définir une tâche ou un bloc de code qui peut être exécuté par un thread. En implémentant cette interface, une classe peut encapsuler le code à exécuter dans un thread sans avoir besoin d’hériter de la classe Thread. Concrètement, une classe qui implémente Runnable doit redéfinir la méthode run() où sera placé le code à exécuter en parallèle. Pour lancer ce code dans un thread, on crée un objet Thread en lui passant une instance de cette classe Runnable, puis on appelle la méthode start() du thread.
+
+Les avantages de Runnable sont notamment :
+
+Permettre à une classe d’hériter d’une autre classe (car Java ne supporte pas l’héritage multiple, on ne peut pas étendre Thread et une autre classe en même temps).
+Séparer la définition de la tâche (dans Runnable) de la gestion du thread (dans Thread).
+
+
+
+-------------------------------------------------------------App.java
+import java.lang.Thread;
+
+public class App implements Runnable{
+	public static void main(String[] args) throws InterruptedException{
+	
+		Thread task = new Thread(new App());
+		Thread task2 = new Thread(new App());
+		
+		task.start();
+		task2.start();
+		
+	}
+	
+	@Override
+	public void run(){
+		for(int i = 0 ; i < 5 ; ++i){
+			System.out.println(i);
+			
+			try{
+				Thread.sleep(1500);
+			}
+			catch (InterruptedException e){
+				System.out.println(e.getMessage());
+			}
+		}
+	}
+}
+-------------------------------------------------------------
+
+
+
+
+
+
+-> Executeurs 
+
+
+* Un exécuteur (Executor) en Java est un composant du framework java.util.concurrent qui permet de gérer et d'exécuter des tâches de manière asynchrone sans avoir à manipuler directement les threads. Plutôt que de créer et contrôler manuellement des threads, on soumet des tâches (généralement des objets Runnable ou Callable) à un exécuteur qui se charge de les exécuter, souvent via un pool de threads réutilisables.
+
+L'intérêt principal d'un exécuteur est de simplifier la gestion des threads, d'améliorer les performances en limitant la création et destruction répétée de threads, et de mieux contrôler la concurrence dans une application.
+
+
+---------------------------------------------------------------------------------App.java
+import java.util.concurrent.Executors;
+import java.util.concurrent.Executor;
+
+public class App{
+	public static void main(String[] args){
+	
+		Executor ex = Executors.newSingleThreadExecutor();
+		
+		Runnable task = () -> 
+		{
+			for(int i = 0 ; i < 5 ; ++i){
+				System.out.println(i);
+			
+				try{
+					Thread.sleep(1500);
+				}
+				catch (InterruptedException e){
+					System.out.println(e.getMessage());
+				}
+			}
+		};
+		
+		
+		Runnable task2 = () ->  
+		{
+			for(int i = 5 ; i < 9 ; ++i){
+				System.out.println("ici on continue la 2e tache " + i);
+			
+				try{
+					Thread.sleep(1500);
+				}
+				catch (InterruptedException e){
+					System.out.println(e.getMessage());
+				}
+			}
+		};
+
+		
+		ex.execute(task);
+		ex.execute(task2);
+		ex.shutdown();
+	}
+}
+------------------------------------------------------------------------------------------
+
+
+* Executors : C’est une classe utilitaire qui fournit des méthodes statiques pour créer différentes implémentations d’exécuteurs (ExecutorService), comme des pools de threads fixes, un thread unique, ou des exécuteurs planifiés. Elle facilite la création et la gestion des threads sans les manipuler directement.
+* Executor : est une interface simple qui définit une méthode unique execute(Runnable task) pour soumettre une tâche à exécuter. Elle sert à découpler la soumission d’une tâche de la manière dont elle sera exécutée (immédiatement, dans un nouveau thread, dans un pool, etc.).
+* execute() : C’est la méthode définie dans l’interface Executor (et héritée par ExecutorService) qui permet de soumettre une tâche de type Runnable à l’exécuteur. L’exécuteur décide comment et quand cette tâche sera exécutée (immédiatement, dans un thread séparé, ou via un pool).
+* shutdown() : Cette méthode appartient à l’interface ExecutorService (qui étend Executor). Elle sert à arrêter proprement l’exécuteur : il n’accepte plus de nouvelles tâches mais continue d’exécuter celles déjà soumises. C’est une étape importante pour libérer les ressources (threads) une fois que le travail est terminé.
+
+
+-> Parmi les types des executeurs
+
+
+* newSingleThreadExecutor() : Crée un exécuteur avec un seul thread unique qui exécute les tâches séquentiellement, une par une, dans l’ordre de soumission. Si ce thread meurt à cause d’une exception, un nouveau thread est créé pour continuer à exécuter les tâches restantes. Utile pour garantir l’exécution ordonnée et non concurrente des tâches.
+* newCachedThreadPool() : Crée un exécuteur avec un pool de threads qui peut grandir dynamiquement : il crée de nouveaux threads au besoin et réutilise les threads inactifs. Les threads inutilisés sont terminés après un certain délai. Ce type est adapté aux tâches courtes et nombreuses, car il optimise la création et la destruction des threads.
+* newFixedThreadPool(int n) : Crée un exécuteur avec un nombre fixe n de threads. Les tâches sont mises en file d’attente si tous les threads sont occupés. Ce pool est stable et limite le nombre de threads actifs simultanément, ce qui évite la surcharge du système.
+
+
+
+
+=> ExecutorService et Future
+
+
+
+* ExecutorService : est une interface qui étend l'interface Executor et fournit un service avancé pour gérer l'exécution de tâches asynchrones de type Runnable ou Callable. Il encapsule un pool de threads et une file d'attente de tâches à exécuter. Le service attribue les tâches aux threads disponibles, qui les exécutent en parallèle.
+* Future : est une interface qui représente le résultat d'une tâche asynchrone soumise à un ExecutorService. Elle permet de :
+
+Vérifier si la tâche est terminée (isDone()).
+Attendre la fin de la tâche et récupérer son résultat avec get().
+Annuler la tâche si elle est encore en cours avec cancel().
+Savoir si la tâche a été annulée (isCancelled()).
+
+Le Future agit donc comme un "ticket" pour suivre l'état et le résultat d'une tâche exécutée en arrière-plan.
+
+
+
+------------------------------------------------------------------------------------------App.java
+import java.util.concurrent.Executors;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Future;
+
+public class App{
+	public static void main(String[] args){
+	
+		ExecutorService ex = Executors.newCachedThreadPool();
+		
+		Runnable task = () -> 
+		{
+			for(int i = 0 ; i < 5 ; ++i){
+				System.out.println(i);
+			
+				try{
+					Thread.sleep(1000);
+				}
+				catch (InterruptedException e){
+					System.out.println(e.getMessage());
+				}
+			}
+		};
+		
+		
+		Runnable task2 = () ->  
+		{
+			for(int i = 5 ; i < 9 ; ++i){
+				System.out.println("ici on continue la 2e tache " + i);
+			
+				try{
+					Thread.sleep(1500);
+				}
+				catch (InterruptedException e){
+					System.out.println(e.getMessage());
+				}
+			}
+		};
+
+		Future<?> f1 = ex.submit(task);
+		Future<?> f2 = ex.submit(task2);
+
+		while(!(f1.isDone()) || !(f2.isDone())){
+			System.out.println("On attend...");
+			
+			try{
+				Thread.sleep(500);
+			}
+			catch (InterruptedException e){
+				System.out.println(e.getMessage());
+			}
+		}
+			
+				
+		if((f1.isDone()) && (f2.isDone()))
+			System.out.println("FINITO!");
+		
+		ex.shutdown();
+	}
+}
+------------------------------------------------------------------------------------------
+
+
+* submit() : La méthode submit() en Java fait partie de l'interface ExecutorService et sert à soumettre une tâche à exécuter de manière asynchrone. Elle permet d’envoyer une tâche (de type Runnable ou Callable) à un exécuteur (ExecutorService) pour qu’elle soit exécutée dans un thread géré par ce service. Contrairement à la méthode execute(), submit() retourne un objet Future qui représente le résultat futur de la tâche. Cela permet de :
+Suivre l’état d’avancement de la tâche,
+Récupérer son résultat (si la tâche est un Callable),
+Annuler la tâche si besoin.
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+*Database (JDBC)
 
 
 
